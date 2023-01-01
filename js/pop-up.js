@@ -1,22 +1,21 @@
 document.addEventListener("DOMContentLoaded", function () {
     var modal = document.getElementById("popupModal");
-    var closeBtn = document.querySelector("#popupModal .close"); // Más preciso
+    var closeBtn = document.querySelector("#popupModal .close");
 
-    // Verificar si el modal y el botón existen
     if (!modal || !closeBtn) {
         console.error("Modal o botón de cierre no encontrados");
         return;
     }
 
-    // Mostrar el modal automáticamente
-    modal.style.display = "block";
+    // Esperar 10 segundos antes de mostrar el modal
+    setTimeout(function () {
+        modal.style.display = "flex";
+    }, 10000); // 10 segundos
 
-    // Cerrar el modal al hacer clic en la "X"
     closeBtn.addEventListener("click", function () {
         modal.style.display = "none";
     });
 
-    // Cerrar el modal al hacer clic fuera de él
     window.addEventListener("click", function (event) {
         if (event.target === modal) {
             modal.style.display = "none";

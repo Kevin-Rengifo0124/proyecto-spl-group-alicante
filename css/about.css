@@ -757,7 +757,8 @@ a:focus {
     position: relative;
     overflow: hidden;
     width: 100%;
-    height: 400px; /* Mantiene la altura en pantallas grandes */
+    height: 400px;
+    /* Mantiene la altura en pantallas grandes */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -773,7 +774,8 @@ a:focus {
 
 @media (max-width: 768px) {
     .service .service-img {
-        height: 250px; /* Ajusta la altura en móviles */
+        height: 250px;
+        /* Ajusta la altura en móviles */
     }
 }
 
@@ -798,9 +800,17 @@ a:focus {
 }
 
 .service .service-overlay p {
-    margin: 0;
+    max-width: 80%;
+    margin: 0 auto;
+    line-height: 1.5;
+    font-size: 16px;
     color: #ffffff;
-    text-align: center;
+}
+
+.service .service-overlay b {
+    font-size: 18px;
+    display: block;
+    margin-bottom: 10px;
 }
 
 .service .service-text {
@@ -1453,8 +1463,10 @@ a:focus {
 .portfolio .portfolio-img {
     position: relative;
     overflow: hidden;
-    aspect-ratio: 4/3; /* Mantiene proporción */
-    background-color: #f0f0f0; /* Fondo de imágenes no cargadas */
+    aspect-ratio: 4/3;
+    /* Mantiene proporción */
+    background-color: #f0f0f0;
+    /* Fondo de imágenes no cargadas */
 }
 
 .portfolio .portfolio-img img {
@@ -1781,7 +1793,6 @@ a:focus {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(8px);
-    display: flex;
     justify-content: center;
     align-items: center;
 }
@@ -1794,29 +1805,20 @@ a:focus {
     align-items: center;
     background: linear-gradient(135deg, rgba(255, 107, 0, 0.9), rgba(255, 140, 66, 0.9));
     color: #fff;
-    /* Imagen de fondo */
     background-size: cover;
-    /* Ajustar imagen al contenedor */
-    margin: 0 auto;
+    margin: 0;
     padding: 40px 30px;
-    /* Más espacio interno */
     border-radius: 20px;
-    /* Bordes más suaves */
     width: 70%;
-    /* Más ancho */
     max-width: 800px;
-    /* Tamaño máximo */
     height: auto;
-    /* Más alto */
     max-height: 600px;
-    /* Altura máxima */
     text-align: center;
     position: relative;
-    top: 50%;
-    transform: translateY(-50%);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
     color: #333;
 }
+
 
 /* Texto con fondo semitransparente */
 #popupModal .modal-content h2,
@@ -1867,17 +1869,20 @@ a:focus {
 
 /* --- Hacer el modal responsive SOLO en celulares --- */
 @media screen and (max-width: 768px) {
+    #popupModal {
+        align-items: center;
+    }
+
     #popupModal .modal-content {
         width: 90%;
-        /* Hacerlo más ancho en móviles */
         max-width: 90%;
         padding: 20px;
         border-radius: 15px;
-        top: 50%;
-        /* Eliminar el efecto de desplazamiento en móviles */
-        transform: translateY(-50%);
+        transform: translateY(0);
+        /* Esto evita dobles transformaciones si ya está centrado por align-items */
     }
 }
+
 
 @media screen and (max-width: 480px) {
     #popupModal .modal-content {
@@ -2151,7 +2156,7 @@ a:focus {
     }
 }
 
-.wow { 
+.wow {
     visibility: hidden;
 }
 
@@ -2163,7 +2168,8 @@ a:focus {
     padding: 0;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;  /* Permite que los elementos se ajusten en varias líneas si es necesario */
+    flex-wrap: wrap;
+    /* Permite que los elementos se ajusten en varias líneas si es necesario */
     gap: 5px;
 }
 
@@ -2195,20 +2201,25 @@ a:focus {
 /* Para móviles: Mantener el menú horizontal */
 @media (max-width: 767px) {
     .portfolio-menu {
-        flex-wrap: nowrap; /* Evita que los elementos bajen de línea */
-        overflow-x: auto;  /* Agrega desplazamiento horizontal si es necesario */
+        flex-wrap: nowrap;
+        /* Evita que los elementos bajen de línea */
+        overflow-x: auto;
+        /* Agrega desplazamiento horizontal si es necesario */
         justify-content: flex-start;
         padding: 5px;
-        white-space: nowrap; /* Evita que los elementos se rompan */
+        white-space: nowrap;
+        /* Evita que los elementos se rompan */
     }
 
     .portfolio-menu::-webkit-scrollbar {
-        display: none; /* Oculta la barra de desplazamiento en Chrome y Safari */
+        display: none;
+        /* Oculta la barra de desplazamiento en Chrome y Safari */
     }
 
     .portfolio-menu li a {
         font-size: 13px;
-        padding: 6px 10px; /* Reduce el padding para más espacio */
+        padding: 6px 10px;
+        /* Reduce el padding para más espacio */
     }
 }
 
@@ -2266,7 +2277,8 @@ a:focus {
     display: flex;
     align-items: center;
     gap: 10px;
-    margin-bottom: 25px;  /* Espacio entre cada categoría */
+    margin-bottom: 25px;
+    /* Espacio entre cada categoría */
 }
 
 .icono {
@@ -2276,54 +2288,71 @@ a:focus {
 /* Mostrar categorías en iPads y ocultar en móviles */
 @media (max-width: 767px) {
     .categoria {
-        display: none; /* Oculta categorías en dispositivos móviles */
+        display: none;
+        /* Oculta categorías en dispositivos móviles */
     }
 }
 
 /* Reducir tamaño de categorías en iPads en modo vertical (hasta 834px) */
 @media (min-width: 768px) and (max-width: 834px) {
     .categoria {
-        font-size: 12px;         /* Ajusta el tamaño de texto */
-        padding: 5px;           /* Ajusta el padding dentro de la categoría */
-        margin-top: 15px;        /* Ajusta el espacio superior */
-        margin-bottom: 20px;     /* Ajusta el espacio inferior entre las categorías */
+        font-size: 12px;
+        /* Ajusta el tamaño de texto */
+        padding: 5px;
+        /* Ajusta el padding dentro de la categoría */
+        margin-top: 15px;
+        /* Ajusta el espacio superior */
+        margin-bottom: 20px;
+        /* Ajusta el espacio inferior entre las categorías */
     }
 
     .icono {
-        font-size: 20px; /* Ajusta el tamaño de los iconos */
+        font-size: 20px;
+        /* Ajusta el tamaño de los iconos */
     }
 
     .categoria:first-child {
-        margin-top: 3px; /* Ajusta el espacio superior solo para la primera categoría */
+        margin-top: 3px;
+        /* Ajusta el espacio superior solo para la primera categoría */
     }
 
     /* Ajuste para mover la última categoría hacia arriba en iPad */
     .categoria:last-child {
-        margin-top: -10px;  /* Ajusta este valor según el espacio deseado */
-        margin-bottom: 15px; /* Ajusta el margen inferior si es necesario */
+        margin-top: -10px;
+        /* Ajusta este valor según el espacio deseado */
+        margin-bottom: 15px;
+        /* Ajusta el margen inferior si es necesario */
     }
 }
 
 /* Reducir tamaño en iPads en modo horizontal (hasta 1194px) */
 @media (min-width: 835px) and (max-width: 1194px) {
     .categoria {
-        font-size: 12px;         /* Ajusta el tamaño de texto */
-        padding: 10px;           /* Ajusta el padding dentro de la categoría */
-        margin-top: 15px;        /* Ajusta el espacio superior */
-        margin-bottom: 20px;     /* Ajusta el espacio inferior entre las categorías */
+        font-size: 12px;
+        /* Ajusta el tamaño de texto */
+        padding: 10px;
+        /* Ajusta el padding dentro de la categoría */
+        margin-top: 15px;
+        /* Ajusta el espacio superior */
+        margin-bottom: 20px;
+        /* Ajusta el espacio inferior entre las categorías */
     }
 
     .icono {
-        font-size: 12px; /* Ajusta el tamaño de los iconos */
+        font-size: 12px;
+        /* Ajusta el tamaño de los iconos */
     }
 
     .categoria:first-child {
-        margin-top: 15px; /* Ajusta el espacio superior solo para la primera categoría */
+        margin-top: 15px;
+        /* Ajusta el espacio superior solo para la primera categoría */
     }
 
     /* Ajuste para mover la última categoría hacia arriba en iPad */
     .categoria:last-child {
-        margin-top: -10px;  /* Ajusta este valor según el espacio deseado */
-        margin-bottom: 15px; /* Ajusta el margen inferior si es necesario */
+        margin-top: -10px;
+        /* Ajusta este valor según el espacio deseado */
+        margin-bottom: 15px;
+        /* Ajusta el margen inferior si es necesario */
     }
 }

@@ -1785,7 +1785,6 @@ a:focus {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(8px);
-    display: flex;
     justify-content: center;
     align-items: center;
 }
@@ -1798,29 +1797,20 @@ a:focus {
     align-items: center;
     background: linear-gradient(135deg, rgba(255, 107, 0, 0.9), rgba(255, 140, 66, 0.9));
     color: #fff;
-    /* Imagen de fondo */
     background-size: cover;
-    /* Ajustar imagen al contenedor */
-    margin: 0 auto;
+    margin: 0;
     padding: 40px 30px;
-    /* Más espacio interno */
     border-radius: 20px;
-    /* Bordes más suaves */
     width: 70%;
-    /* Más ancho */
     max-width: 800px;
-    /* Tamaño máximo */
     height: auto;
-    /* Más alto */
     max-height: 600px;
-    /* Altura máxima */
     text-align: center;
     position: relative;
-    top: 50%;
-    transform: translateY(-50%);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
     color: #333;
 }
+
 
 /* Texto con fondo semitransparente */
 #popupModal .modal-content h2,
@@ -1871,17 +1861,20 @@ a:focus {
 
 /* --- Hacer el modal responsive SOLO en celulares --- */
 @media screen and (max-width: 768px) {
+    #popupModal {
+        align-items: center;
+    }
+
     #popupModal .modal-content {
         width: 90%;
-        /* Hacerlo más ancho en móviles */
         max-width: 90%;
         padding: 20px;
         border-radius: 15px;
-        top: 50%;
-        /* Eliminar el efecto de desplazamiento en móviles */
-        transform: translateY(-50%);
+        transform: translateY(0);
+        /* Esto evita dobles transformaciones si ya está centrado por align-items */
     }
 }
+
 
 @media screen and (max-width: 480px) {
     #popupModal .modal-content {
@@ -1908,6 +1901,7 @@ a:focus {
         right: 15px;
     }
 }
+
 
 /*******************************/
 /********* Choose CSS **********/
