@@ -154,11 +154,14 @@ a:focus {
 .nav-bar.nav-sticky {
     position: fixed;
     top: 0;
-    width: 100vw;  /* Asegura que cubra todo el ancho */
-    max-width: 100%; /* Se adapta a la pantalla */
+    width: 100vw;
+    /* Asegura que cubra todo el ancho */
+    max-width: 100%;
+    /* Se adapta a la pantalla */
     box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
     z-index: 999;
-    min-height: 60px; /* Ajusta la altura mínima para evitar recortes */
+    min-height: 60px;
+    /* Ajusta la altura mínima para evitar recortes */
 }
 
 .nav-bar .navbar {
@@ -686,33 +689,40 @@ a:focus {
 .service .row {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Centra los elementos en la fila */
-    gap: 30px; /* Espacio entre los elementos */
+    justify-content: center;
+    /* Centra los elementos en la fila */
+    gap: 30px;
+    /* Espacio entre los elementos */
 }
 
 .service .col-lg-4 {
-    flex: 1 1 calc(23% - 30px); /* Tamaño relativo para 4 columnas con espacio */
+    flex: 1 1 calc(23% - 30px);
+    /* Tamaño relativo para 4 columnas con espacio */
     max-width: calc(23% - 30px);
-    box-sizing: border-box; /* Incluye el padding y borde en el cálculo del ancho */
+    box-sizing: border-box;
+    /* Incluye el padding y borde en el cálculo del ancho */
 }
 
 @media (max-width: 768px) {
     .service .col-lg-4 {
-        flex: 1 1 calc(48% - 30px); /* Dos columnas en pantallas medianas */
+        flex: 1 1 calc(48% - 30px);
+        /* Dos columnas en pantallas medianas */
         max-width: calc(48% - 30px);
     }
 }
 
 @media (max-width: 576px) {
     .service .col-lg-4 {
-        flex: 1 1 100%; /* Una columna en pantallas pequeñas */
+        flex: 1 1 100%;
+        /* Una columna en pantallas pequeñas */
         max-width: 100%;
     }
 }
 
 .service .service-item {
     position: relative;
-    width: 100%; /* Ajusta para que los elementos se alineen dentro de su contenedor */
+    width: 100%;
+    /* Ajusta para que los elementos se alineen dentro de su contenedor */
     text-align: center;
     margin: 15px;
 }
@@ -726,8 +736,10 @@ a:focus {
 .service .service-img img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Asegura que las imágenes se ajusten correctamente */
-    display: block; /* Elimina espacios blancos entre imágenes */
+    object-fit: cover;
+    /* Asegura que las imágenes se ajusten correctamente */
+    display: block;
+    /* Elimina espacios blancos entre imágenes */
 }
 
 .service .service-overlay {
@@ -1627,7 +1639,7 @@ a:focus {
 .contact .contact-form input {
     color: #ffffff;
     height: 40px;
-    border-radius: 0;
+    border-radius: 8px;
     border-width: 1px;
     border-color: rgba(256, 256, 256, .4);
     background: transparent;
@@ -1636,7 +1648,7 @@ a:focus {
 .contact .contact-form textarea {
     color: #ffffff;
     height: 185px;
-    border-radius: 0;
+    border-radius: 8px;
     border-width: 1px;
     border-color: rgba(256, 256, 256, .4);
     background: transparent;
@@ -1667,7 +1679,7 @@ a:focus {
     color: #dddddd;
     background: #474B51;
     border: none;
-    border-radius: 0;
+    border-radius: 8px;
     transition: .3s;
 }
 
@@ -1680,6 +1692,98 @@ a:focus {
     margin: 0;
     padding: 0;
     list-style-type: none;
+}
+
+/*******************************/
+/********* Pop-up CSS *********/
+/*******************************/
+#popupModal {
+    display: none;
+    /* Oculto por defecto */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fondo oscuro */
+}
+
+/* Contenido del modal */
+#popupModal .modal-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url('../images-spl-group/fondo-pop-up.png') no-repeat center center;
+    /* Imagen de fondo */
+    background-size: cover;
+    /* Ajustar imagen al contenedor */
+    margin: 0 auto;
+    padding: 40px 20px;
+    /* Más espacio interno */
+    border-radius: 15px;
+    /* Bordes más suaves */
+    width: 70%;
+    /* Más ancho */
+    max-width: 800px;
+    /* Tamaño máximo */
+    height: 60%;
+    /* Más alto */
+    max-height: 600px;
+    /* Altura máxima */
+    text-align: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    /* Sombra más pronunciada */
+    color: #333;
+    /* Color del texto */
+}
+
+/* Texto con fondo semitransparente */
+#popupModal .modal-content h2,
+#popupModal .modal-content p {
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Fondo blanco semitransparente */
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+/* Botón de cerrar */
+#popupModal .close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+}
+
+/* Botón contactar */
+#popupModal .btn-contactar {
+    background-color: #FF6B00;
+    color: #fff;
+    padding: 15px 30px;
+    /* Botón más grande */
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    /* Letras en mayúsculas */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    /* Espacio entre el texto y el botón */
+
+}
+
+#popupModal .btn-contactar:hover {
+    background-color: #FF8C42;
 }
 
 /*******************************/
