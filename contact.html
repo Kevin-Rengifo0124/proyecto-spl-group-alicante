@@ -36,46 +36,18 @@
                     <div class="col-lg-4 col-md-12">
                         <div class="logo">
                             <a href="index.html">
+                                <img src="images-spl-group/logo.png" alt="Logo">
                                 <h1>SPL Group</h1>
-                                <!-- <img src="img/logo.jpg" alt="Logo"> -->
                             </a>
                         </div>
                     </div>
                     <div class="col-lg-8 col-md-7 d-none d-lg-block">
-                        <div class="row">
-                            <div class="col-4">
-                                <div class="top-bar-item">
-                                    <div class="top-bar-icon">
-                                        <i class="flaticon-calendar"></i>
-                                    </div>
-                                    <div class="top-bar-text">
-                                        <h3>Horario de apertura</h3>
-                                        <p>Lunes - Viernes, 9:00 - 18:00</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-4">
-                                <div class="top-bar-item">
-                                    <div class="top-bar-icon">
-                                        <i class="flaticon-call"></i>
-                                    </div>
-                                    <div class="top-bar-text">
-                                        <h3>Llámanos</h3>
-                                        <p>+34 604 40 76 05</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-4">
-                                <div class="top-bar-item">
-                                    <div class="top-bar-icon">
-                                        <i class="flaticon-send-mail"></i>
-                                    </div>
-                                    <div class="top-bar-text">
-                                        <h3>Mail</h3>
-                                        <p>info@splgroup.es</p>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="social-icons">
+                            <a href="https://www.facebook.com/splgroup.spain/?locale=hi_IN" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://api.whatsapp.com/send/?phone=34604407605&text=Hola%2C+necesito+informaci%C3%B3n+sobre+sus+servicios+disponibles&type=phone_number&app_absent=0" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                            <a href="https://www.instagram.com/splgroup.es/" class="social-icon"><i class="fab fa-instagram"></i></a>
+                            <a href="contact.html" class="social-icon"><i class="fas fa-envelope"></i></a>
+                            <a href="https://www.linkedin.com/company/service-pluslevante/" class="social-icon"><i class="fab fa-linkedin"></i></a>
                         </div>
                     </div>
                 </div>
@@ -91,11 +63,9 @@
                     <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <div class="navbar-nav mr-auto">
                             <a href="index.html" class="nav-item nav-link active">Inicio</a>
-                            <a href="about.html" class="nav-item nav-link">Empresa</a>
                             <div class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Construcciones</a>
                                 <div class="dropdown-menu">
@@ -107,14 +77,13 @@
                             </div>
                             <a href="structures.html" class="nav-item nav-link">Estructuras</a>
                             <div class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Reformas</a>
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Servicios</a>
                                 <div class="dropdown-menu">
-                                    <a href="" class="dropdown-item"></a>
-                                    <a href="" class="dropdown-item"></a>
+                                    <a href="" class="dropdown-item">Reformas</a>
+                                    <a href="about.html" class="dropdown-item">Empresa</a>
+                                    <a href="contact.html" class="dropdown-item">Contacto</a>
                                 </div>
                             </div>
-                            <a href="service.html" class="nav-item nav-link">Servicios</a>
-                            <a href="contact.html" class="nav-item nav-link">Contacto</a>
                         </div>
                         <div class="ml-auto">
                             <a class="btn" href="contact.html">Consultar</a>
@@ -124,7 +93,6 @@
             </div>
         </div>
         <!-- Nav Bar End -->
-
 
         <!-- Page Header Start -->
         <div class="page-header">
@@ -142,7 +110,6 @@
         </div>
         <!-- Page Header End -->
 
-
         <!-- Contact Start -->
         <div class="contact wow fadeInUp">
             <div class="container">
@@ -151,47 +118,44 @@
                     <h2>Para cualquier consulta</h2>
                 </div>
                 <div class="row">
-                    <!-- Formulario -->
+                    <!-- Form -->
                     <div class="col-md-6">
                         <div class="contact-form">
                             <form name="sentMessage" id="contactForm" novalidate="novalidate">
                                 <div class="control-group">
-                                    <input type="text" class="form-control" id="name" placeholder="Nombre"
+                                    <input type="text" class="form-control" id="name" name="name" placeholder="Nombre Completo"
                                         required="required"
                                         data-validation-required-message="Por favor ingrese su nombre" />
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="control-group">
-                                    <input type="tel" class="form-control" id="phone" placeholder="Teléfono"
+                                    <input type="tel" class="form-control" id="phone" name="phone" placeholder="Teléfono"
                                         required="required"
                                         data-validation-required-message="Por favor ingrese su teléfono" />
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="control-group">
-                                    <input type="email" class="form-control" id="email" placeholder="Correo Electrónico"
+                                    <input type="email" class="form-control" id="email" name="email"  placeholder="Correo Electrónico"
                                         required="required"
                                         data-validation-required-message="Por favor ingrese su correo" />
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="control-group">
-                                    <input type="text" class="form-control" id="city" placeholder="Ciudad"
-                                        required="required"
-                                        data-validation-required-message="Por favor ingrese su ciudad" />
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                                <div class="control-group">
-                                    <select class="form-control" id="subject" required="required"
+                                    <select class="form-control" id="subject" name="subject" required="required">
                                         data-validation-required-message="Por favor seleccione un asunto">
-                                        <option value="">- Seleccionar -</option>
-                                        <option value="Consulta">Consulta</option>
-                                        <option value="Soporte">Soporte</option>
-                                        <option value="Otros">Otros</option>
+                                        <option value="">Reformas</option>
+                                        <option value="Mantenimiento y Reparaciones">Mantenimiento y Reparaciones
+                                        </option>
+                                        <option value="Jardinería y Poda">Jardinería y Poda</option>
+                                        <option value="Limpieza Profesional">Limpieza Profesional</option>
+                                        <option value="Montaje e Instalaciones">Montaje e Instalaciones</option>
+                                        <option value="Otro Servicio">Otro Servicio</option>
                                     </select>
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="control-group">
-                                    <textarea class="form-control" id="message" placeholder="Escríbenos aquí"
-                                        required="required"
+                                    <textarea class="form-control" id="message" name="message"
+                                        placeholder="Cuéntanos en ¿Qué podemos ayudarte?" required="required"
                                         data-validation-required-message="Por favor ingrese su mensaje"></textarea>
                                     <p class="help-block text-danger"></p>
                                 </div>
@@ -202,18 +166,17 @@
                             </form>
                         </div>
                     </div>
-                    <!-- Mapa de Google -->
+                    <!-- Google Map -->
                     <div class="col-md-6">
                         <div class="google-map">
                             <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.988984112506!2d-74.22390422548225!3d4.589174243644199!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f7565dd5147f7%3A0x3e3dff6d70b5e1e1!2sVidrio%20Andino%20Saint-Gobain!5e0!3m2!1ses-419!2sco!4v1674938572769!5m2!1ses-419!2sco"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3110.0985933644524!2d-0.7983948250514207!3d38.04472857971525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd63a8fb31d8977b%3A0x1d6e8a82c018ed1c!2sCalle%20Lo%20Blanc%2C%2018%2C%2003187%20Los%20Montesinos%2C%20Alicante%2C%20Espa%C3%B1a!5e0!3m2!1ses-419!2sco!4v1674938572769!5m2!1ses-419!2sco"
                                 width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                                 referrerpolicy="no-referrer-when-downgrade">
                             </iframe>
                             <div class="contact-text mt-3">
-                                <p>Planta de Vidrio Flotado, Km 6.5 Vía Soacha - Mondoñedo Vereda Canoas</p>
-                                <p>Teléfono: +57 (601) 5978999 Ext 720</p>
-                                <p>Celular: (+57) 3187855145 / (+57) 3172596601</p>
+                                <p>Calle Lo Blanc, 18, 03187 Los Montesinos, Alicante, España</p>
+                                <p>Teléfono: +34 604 40 76 05</p>
                             </div>
                         </div>
                     </div>
@@ -222,37 +185,36 @@
         </div>
         <!-- Contact End -->
 
-
         <!-- Footer Start -->
         <div class="footer wow fadeIn" data-wow-delay="0.3s">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6 col-lg-3">
+                    <div class="col-md-4">
                         <div class="footer-contact">
                             <h2>Contacto</h2>
-                            <p><i class="fa fa-map-marker-alt"></i>""</p>
+                            <p><i class="fa fa-map-marker-alt"></i>Calle Lo Blanc, 18, 03187 Los Montesinos, Alicante,
+                                España</p>
                             <p><i class="fa fa-phone-alt"></i>+34 604 40 76 05</p>
                             <p><i class="fa fa-envelope"></i>info@splgroup.es</p>
                             <div class="footer-social">
-                                <a href=""><i class="fab fa-twitter"></i></a>
-                                <a href=""><i class="fab fa-facebook-f"></i></a>
-                                <a href=""><i class="fab fa-youtube"></i></a>
-                                <a href=""><i class="fab fa-instagram"></i></a>
-                                <a href=""><i class="fab fa-linkedin-in"></i></a>
+                                <a href="https://www.facebook.com/splgroup.spain/?locale=hi_IN"><i class="fab fa-facebook-f"></i></a>
+                                <a href="https://api.whatsapp.com/send/?phone=34604407605&text=Hola%2C+necesito+informaci%C3%B3n+sobre+sus+servicios+disponibles&type=phone_number&app_absent=0"><i class="fab fa-whatsapp"></i></a>
+                                <a href="https://www.instagram.com/splgroup.es/"><i class="fab fa-instagram"></i></a>
+                                <a href="contact.html"><i class="fas fa-envelope"></i></a>
+                                <a href="https://www.linkedin.com/company/service-pluslevante/"><i class="fab fa-linkedin-in"></i></a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-3">
+                    <div class="col-md-4">
                         <div class="footer-link">
                             <h2>Servicios</h2>
-                            <a href="">""</a>
-                            <a href="">""</a>
-                            <a href="">""</a>
-                            <a href="">""</a>
-                            <a href="">""</a>
+                            <a href="">Reformas</a>
+                            <a href="">Mantenimiento Hogar</a>
+                            <a href="">Fontaneria</a>
+                            <a href="">Alojamiento Turísticos</a>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-3">
+                    <div class="col-md-4">
                         <div class="footer-link">
                             <h2>Información</h2>
                             <a href="about.html">Empresa</a>
@@ -262,31 +224,19 @@
                             <a href="service.html">Servicios</a>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-3">
-                        <div class="newsletter">
-                            <h2>Protección De Datos</h2>
-                            <p>
-                                El responsable del tratamiento es SPL JEDAHOLD S.L. (SPL Group).
-                                La finalidad de la recogida de sus datos es para poder atender sus solicitudes de
-                                información. Tiene derecho a saber qué información tenemos sobre usted, corregirla o
-                                eliminarla tal y como se explica en la Política de Privacidad</p>
-                        </div>
-                    </div>
                 </div>
             </div>
             <div class="container footer-menu">
                 <div class="f-menu">
-                    <a href="">Terms of use</a>
-                    <a href="">Privacy policy</a>
-                    <a href="">Cookies</a>
-                    <a href="">Help</a>
-                    <a href="">FQAs</a>
+                    <a href="">Condiciones de uso</a>
+                    <a href="">Política de privacidad</a>
+                    <a href=""> Política de cookies</a>
                 </div>
             </div>
             <div class="container copyright">
                 <div class="row">
                     <div class="col-md-6">
-                        <p>&copy; <a href="#">Your Site Name</a>, All Right Reserved.</p>
+                        <p>&copy; <a href="#">Copyright © 2025 </a>, Service Plus Levante.</p>
                     </div>
                     <div class="col-md-6">
                         <a href="index.html">Copyright © SPL Group | Aviso legal y política de privacidad</a>
@@ -294,8 +244,8 @@
                 </div>
             </div>
         </div>
-        <!-- Footer End -->
 
+        <!-- Footer End -->
         <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
     </div>
 

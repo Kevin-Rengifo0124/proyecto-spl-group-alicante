@@ -154,10 +154,11 @@ a:focus {
 .nav-bar.nav-sticky {
     position: fixed;
     top: 0;
-    width: 100%;
-    max-width: 1366px;
+    width: 100vw;  /* Asegura que cubra todo el ancho */
+    max-width: 100%; /* Se adapta a la pantalla */
     box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
     z-index: 999;
+    min-height: 60px; /* Ajusta la altura mínima para evitar recortes */
 }
 
 .nav-bar .navbar {
@@ -239,7 +240,6 @@ a:focus {
         display: none;
     }
 }
-
 
 /*******************************/
 /******** Carousel CSS *********/
@@ -364,7 +364,6 @@ a:focus {
     animation-duration: 1.5s;
 }
 
-
 /*******************************/
 /******* Page Header CSS *******/
 /*******************************/
@@ -373,7 +372,7 @@ a:focus {
     margin-bottom: 45px;
     padding: 90px 0;
     text-align: center;
-    background: #fdbe33;
+    background: #00A79D;
 }
 
 .page-header h2 {
@@ -449,7 +448,6 @@ a:focus {
     }
 }
 
-
 /*******************************/
 /******* Section Header ********/
 /*******************************/
@@ -478,7 +476,6 @@ a:focus {
         font-size: 30px;
     }
 }
-
 
 /*******************************/
 /********* Feature CSS *********/
@@ -574,7 +571,6 @@ a:focus {
     color: #030f27;
 }
 
-
 /*******************************/
 /********** About CSS **********/
 /*******************************/
@@ -627,7 +623,6 @@ a:focus {
         height: auto;
     }
 }
-
 
 /*******************************/
 /********** Fact CSS ***********/
@@ -1246,7 +1241,6 @@ a:focus {
     background: #030f27;
 }
 
-
 /**********************************/
 /*********** Sidebar CSS **********/
 /**********************************/
@@ -1417,7 +1411,6 @@ a:focus {
     transform: scale(1.1);
 }
 
-
 /*******************************/
 /******** Portfolio CSS ********/
 /*******************************/
@@ -1560,7 +1553,6 @@ a:focus {
     background: #fdbe33;
 }
 
-
 /*******************************/
 /********* Contact CSS *********/
 /*******************************/
@@ -1580,7 +1572,7 @@ a:focus {
 }
 
 .contact .col-md-6:last-child {
-    background: #fdbe33;
+    background: #474B51;
 }
 
 .contact .contact-info {
@@ -1601,7 +1593,7 @@ a:focus {
 
 .contact .contact-item [class^="flaticon-"]::before {
     margin: 0;
-    color: #fdbe33;
+    color: #00A79D;
     font-size: 40px;
 }
 
@@ -1672,8 +1664,8 @@ a:focus {
     padding: 16px 30px;
     font-size: 16px;
     font-weight: 600;
-    color: #fdbe33;
-    background: #030f27;
+    color: #dddddd;
+    background: #474B51;
     border: none;
     border-radius: 0;
     transition: .3s;
@@ -1681,7 +1673,7 @@ a:focus {
 
 .contact .contact-form .btn:hover {
     color: #030f27;
-    background: #ffffff;
+    background: #00A79D;
 }
 
 .contact .help-block ul {
@@ -1689,7 +1681,6 @@ a:focus {
     padding: 0;
     list-style-type: none;
 }
-
 
 /*******************************/
 /********* Footer CSS **********/
