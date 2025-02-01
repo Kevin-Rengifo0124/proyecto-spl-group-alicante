@@ -373,39 +373,50 @@ a:focus {
 .page-header {
     position: relative;
     margin-bottom: 45px;
-    padding: 90px 0;
+    padding: 100px 0;
     text-align: center;
-    background: #00A79D;
+    background: linear-gradient(rgba(3, 15, 39, 0.8), rgba(3, 15, 39, 0.7)),
+        url('../images-spl-group/fondo-pop-up.png') center/cover no-repeat;
+    color: #ffffff;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .page-header h2 {
     position: relative;
-    color: #030f27;
-    font-size: 60px;
-    font-weight: 700;
-    margin-bottom: 20px;
-    padding-bottom: 5px;
+    color: #ffffff;
+    font-size: 64px;
+    font-weight: 800;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 .page-header h2::after {
     position: absolute;
     content: "";
-    width: 100px;
-    height: 2px;
-    left: calc(50% - 50px);
+    width: 120px;
+    height: 3px;
+    left: calc(50% - 60px);
     bottom: 0;
     background: #030f27;
+    border-radius: 5px;
 }
 
 .page-header a {
     position: relative;
-    padding: 0 12px;
+    padding: 0 15px;
     font-size: 22px;
+    font-weight: 600;
     color: #030f27;
+    transition: color 0.3s ease;
+    text-decoration: none;
 }
 
 .page-header a:hover {
     color: #ffffff;
+    text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.7);
 }
 
 .page-header a::after {
@@ -414,22 +425,23 @@ a:focus {
     width: 8px;
     height: 8px;
     top: -2px;
-    right: -7px;
+    right: -10px;
     text-align: center;
-    color: #121518;
+    color: #030f27;
 }
 
 .page-header a:last-child::after {
     display: none;
 }
 
+/* Responsive Design */
 @media (max-width: 991.98px) {
     .page-header {
-        padding: 60px 0;
+        padding: 80px 0;
     }
 
     .page-header h2 {
-        font-size: 45px;
+        font-size: 50px;
     }
 
     .page-header a {
@@ -439,17 +451,18 @@ a:focus {
 
 @media (max-width: 767.98px) {
     .page-header {
-        padding: 45px 0;
+        padding: 60px 0;
     }
 
     .page-header h2 {
-        font-size: 35px;
+        font-size: 40px;
     }
 
     .page-header a {
         font-size: 18px;
     }
 }
+
 
 /*******************************/
 /******* Section Header ********/
@@ -1381,7 +1394,7 @@ a:focus {
     font-weight: 500;
     text-transform: uppercase;
     border-radius: 0;
-    background: #fdbe33;
+    background: #00A79D;
     border: none;
     transition: .3s;
 }
@@ -1389,7 +1402,7 @@ a:focus {
 .portfolio #portfolio-flters li:hover,
 .portfolio #portfolio-flters li.filter-active {
     background: #030f27;
-    color: #fdbe33;
+    color: #00A79D;
 }
 
 .portfolio .load-more {
@@ -1403,7 +1416,7 @@ a:focus {
 }
 
 .portfolio .load-more .btn:hover {
-    color: #fdbe33;
+    color: #00A79D;
     background: #030f27;
 }
 
@@ -1468,7 +1481,7 @@ a:focus {
     width: calc(100% - 60px);
     font-size: 20px;
     font-weight: 700;
-    color: #fdbe33;
+    color: #00A79D;
     text-align: center;
     overflow: hidden;
     white-space: nowrap;
@@ -1493,7 +1506,7 @@ a:focus {
 
 .portfolio .portfolio-warp:hover a.btn {
     color: #ffffff;
-    background: #fdbe33;
+    background: #00A79D;
 }
 
 /*******************************/
@@ -1624,6 +1637,32 @@ a:focus {
     padding: 0;
     list-style-type: none;
 }
+
+.contact .control-group {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.contact .control-group input[type="checkbox"] {
+    width: auto;
+    margin-top: 3px;
+}
+
+.contact .control-group label {
+    margin: 0;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.contact .control-group p.help-block.text-danger {
+    width: 100%;
+    margin-left: 25px; /* Ajusta según sea necesario */
+    font-size: 14px;
+    color: red;
+}
+
 
 /*******************************/
 /********* Pop-up CSS *********/

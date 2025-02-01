@@ -73,7 +73,7 @@
                             <div class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Construcciones</a>
                                 <div class="dropdown-menu">
-                                    <a href="construction.html" class="dropdown-item">Obras</a>
+                                    <a href="" class="dropdown-item">Obras</a>
                                     <a href="" class="dropdown-item">Construcción Residencial</a>
                                     <a href="" class="dropdown-item">Construcción Comercial</a>
                                     <a href="" class="dropdown-item">Rehabilitación Edificios</a>
@@ -83,7 +83,7 @@
                             <div class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Servicios</a>
                                 <div class="dropdown-menu">
-                                    <a href="" class="dropdown-item">Reformas</a>
+                                    <a href="reforms.html" class="dropdown-item">Reformas</a>
                                     <a href="about.html" class="dropdown-item">Empresa</a>
                                     <a href="contact.html" class="dropdown-item">Contacto</a>
                                 </div>
@@ -163,6 +163,18 @@
                                         data-validation-required-message="Por favor ingrese su mensaje"></textarea>
                                     <p class="help-block text-danger"></p>
                                 </div>
+                                <!-- Checkbox de Política de Privacidad -->
+                                <div class="control-group d-flex align-items-center">
+                                    <input type="checkbox" id="privacyPolicy" name="privacyPolicy" required
+                                        style="margin-right: 10px;">
+                                    <label for="privacyPolicy" class="m-0">He leído y acepto la <a
+                                            href="politica-de-privacidad.html" target="_blank">Política de
+                                            Privacidad</a></label>
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <!-- reCAPTCHA -->
+                                <div class="g-recaptcha" data-sitekey="TU_CLAVE_DE_SITE_KEY"></div>
+                                <p class="help-block text-danger"></p>
                                 <div>
                                     <button class="btn btn-primary" type="submit" id="sendMessageButton">Enviar
                                         Mensaje</button>
@@ -189,8 +201,6 @@
             </div>
         </div>
         <!-- Contact End -->
-
-
 
         <!-- Footer Start -->
         <div class="footer wow fadeIn" data-wow-delay="0.3s">
@@ -229,10 +239,8 @@
                         <div class="footer-link">
                             <h2>Información</h2>
                             <a href="about.html">Empresa</a>
-                            <a href="construction.html">Construcciones</a>
-                            <a href="structures.html">Estructuras</a>
-                            <a href="">Reformas</a>
-                            <a href="service.html">Servicios</a>
+                            <a href="contact.html">Contacto</a>
+                            <a href="reforms.html">Reformas</a>
                         </div>
                     </div>
                 </div>
@@ -275,9 +283,12 @@
     <!-- Contact Javascript File -->
     <script src="mail/jqBootstrapValidation.min.js"></script>
     <script src="mail/contact.js"></script>
+    <script src="mail/contact.php"></script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js?hl=es" async defer></script>
+
 </body>
 
 </html>
