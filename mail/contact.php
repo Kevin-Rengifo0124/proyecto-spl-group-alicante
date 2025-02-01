@@ -16,7 +16,7 @@ $m_subject = strip_tags(htmlspecialchars($_POST['subject']));
 $phone = strip_tags(htmlspecialchars($_POST['phone']));
 $message = strip_tags(htmlspecialchars($_POST['message']));
 
-$to = "krengifoo24@gmail.com";  // Correo al que deseas enviar
+$to = "krengifoo24@gmail.com";  
 $subject = "$m_subject - Mensaje de: $name";
 $body = "Has recibido un nuevo mensaje desde tu formulario web.\n\n";
 $body .= "Detalles del mensaje:\n\n";
