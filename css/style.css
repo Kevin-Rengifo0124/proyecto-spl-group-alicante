@@ -1528,7 +1528,7 @@ a:focus {
 }
 
 .contact .col-md-6:last-child {
-    background: #474B51;
+    background: #dddddd;
 }
 
 .contact .contact-info {
@@ -1560,14 +1560,14 @@ a:focus {
 }
 
 .contact .contact-text h2 {
-    color: #fdbe33;
+    color: #00A79D;
     font-size: 20px;
     font-weight: 600;
 }
 
 .contact .contact-text p {
     margin: 0;
-    color: #ffffff;
+    color: #030f27;
     font-size: 16px;
 }
 
@@ -1658,26 +1658,74 @@ a:focus {
 
 .contact .control-group p.help-block.text-danger {
     width: 100%;
-    margin-left: 25px; /* Ajusta según sea necesario */
+    margin-left: 25px;
+    /* Ajusta según sea necesario */
     font-size: 14px;
     color: red;
 }
 
+@media (max-width: 768px) {
+    .contact .contact-form {
+        padding: 0 10px;
+    }
+
+    /* Hacer que el select ocupe todo el ancho correctamente */
+    .contact .contact-form select {
+        width: 100%;
+        font-size: 14px;
+        padding: 10px;
+        border-radius: 8px;
+        background-color: #030f27;
+        color: #ffffff;
+        border: 1px solid rgba(256, 256, 256, 0.4);
+        display: block;
+    }
+
+    /* Asegurar que el checkbox esté alineado correctamente */
+    .contact .control-group {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .contact .control-group input[type="checkbox"] {
+        width: 16px;
+        height: 16px;
+        flex-shrink: 0;
+    }
+
+    .contact .control-group label {
+        font-size: 13px;
+        color: #ffffff;
+        line-height: 1.4;
+    }
+
+    /* Ajuste del botón en móviles */
+    .contact .contact-form .btn {
+        width: 100%;
+        text-align: center;
+        font-size: 14px;
+        padding: 12px;
+    }
+}
 
 /*******************************/
 /********* Pop-up CSS *********/
 /*******************************/
 #popupModal {
     display: none;
-    /* Oculto por defecto */
     position: fixed;
     z-index: 1000;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    /* Fondo oscuro */
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Contenido del modal */
@@ -1686,20 +1734,21 @@ a:focus {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: url('../images-spl-group/fondo-pop-up.png') no-repeat center center;
+    background: linear-gradient(135deg, rgba(255, 107, 0, 0.9), rgba(255, 140, 66, 0.9));
+    color: #fff;
     /* Imagen de fondo */
     background-size: cover;
     /* Ajustar imagen al contenedor */
     margin: 0 auto;
-    padding: 40px 20px;
+    padding: 40px 30px;
     /* Más espacio interno */
-    border-radius: 15px;
+    border-radius: 20px;
     /* Bordes más suaves */
     width: 70%;
     /* Más ancho */
     max-width: 800px;
     /* Tamaño máximo */
-    height: 60%;
+    height: auto;
     /* Más alto */
     max-height: 600px;
     /* Altura máxima */
@@ -1707,20 +1756,22 @@ a:focus {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-    /* Sombra más pronunciada */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
     color: #333;
-    /* Color del texto */
 }
 
 /* Texto con fondo semitransparente */
 #popupModal .modal-content h2,
 #popupModal .modal-content p {
-    background-color: rgba(255, 255, 255, 0.8);
-    /* Fondo blanco semitransparente */
     padding: 10px;
     border-radius: 5px;
-    display: inline-block;
+    font-weight: bold;
+}
+
+#popupModal .cta-text {
+    font-size: 1.2em;
+    margin-top: 10px;
+    font-style: italic;
 }
 
 /* Botón de cerrar */
@@ -1728,32 +1779,29 @@ a:focus {
     position: absolute;
     top: 15px;
     right: 20px;
-    font-size: 24px;
+    font-size: 28px;
     cursor: pointer;
-    color: #333;
+    color: #fff;
 }
 
 /* Botón contactar */
 #popupModal .btn-contactar {
-    background-color: #FF6B00;
-    color: #fff;
-    padding: 15px 30px;
-    /* Botón más grande */
-    border: none;
-    border-radius: 5px;
+    background-color: #fff;
+    color: #FF6B00;
+    padding: 15px 35px;
+    border-radius: 30px;
     font-size: 18px;
     font-weight: bold;
     text-transform: uppercase;
-    /* Letras en mayúsculas */
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     margin-top: 20px;
-    /* Espacio entre el texto y el botón */
-
 }
 
 #popupModal .btn-contactar:hover {
     background-color: #FF8C42;
+    color: #fff;
 }
 
 /*******************************/

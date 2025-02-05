@@ -1,4 +1,5 @@
 <?php
+
 require 'PHPMailer/src/PHPMailer.php';
 require 'PHPMailer/src/SMTP.php';
 require 'PHPMailer/src/Exception.php';
@@ -30,6 +31,8 @@ $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
 $mail = new PHPMailer(true);
 try {
     // Configuración del servidor SMTP
+
+
     $mail->isSMTP();
     $mail->Host = 'smtp.gmail.com'; // Cambia a tu servidor de correo
     $mail->SMTPAuth = true;
@@ -40,7 +43,7 @@ try {
 
     // Remitente y destinatario
     $mail->setFrom($email, $name);
-    $mail->addAddress('krengifoo24@gmail.com'); // Cambia por el destinatario
+    $mail->addAddress('stiven95rengifo@gmail.com'); // Cambia por el destinatario
 
     // Contenido del correo
     $mail->isHTML(true);
