@@ -1665,6 +1665,36 @@ a:focus {
 }
 
 @media (max-width: 768px) {
+    #subject {
+        width: 100%;
+        font-size: 16px;
+        padding: 12px 10px;
+        line-height: 1.5;
+        height: auto;
+        border-radius: 8px;
+        background-color: #030f27;
+        color: #ffffff;
+        border: 1px solid rgba(256, 256, 256, 0.4);
+        appearance: none;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 5'%3E%3Cpath fill='white' d='M0 0l5 5 5-5z'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 10px center;
+        background-size: 12px;
+        display: block;
+    }
+
+    #subject:focus {
+        outline: none;
+        border-color: #00A79D;
+        background-color: #031229;
+    }
+}
+
+
+@media (max-width: 768px) {
+
     .contact .contact-form {
         padding: 0 10px;
     }
@@ -1786,22 +1816,65 @@ a:focus {
 
 /* Botón contactar */
 #popupModal .btn-contactar {
-    background-color: #fff;
-    color: #FF6B00;
-    padding: 15px 35px;
-    border-radius: 30px;
+    background-color: #FF6B00;
+    color: #fff;
+    padding: 15px 30px;
+    /* Botón más grande */
+    border: none;
+    border-radius: 5px;
     font-size: 18px;
     font-weight: bold;
     text-transform: uppercase;
+    /* Letras en mayúsculas */
     cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
     margin-top: 20px;
+    /* Espacio entre el texto y el botón */
+
 }
 
 #popupModal .btn-contactar:hover {
     background-color: #FF8C42;
-    color: #fff;
+}
+
+/* --- Hacer el modal responsive SOLO en celulares --- */
+@media screen and (max-width: 768px) {
+    #popupModal .modal-content {
+        width: 90%;
+        /* Hacerlo más ancho en móviles */
+        max-width: 90%;
+        padding: 20px;
+        border-radius: 15px;
+        top: auto;
+        /* Eliminar el efecto de desplazamiento en móviles */
+        transform: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #popupModal .modal-content {
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    #popupModal .modal-content h2 {
+        font-size: 1.5rem;
+    }
+
+    #popupModal .modal-content p {
+        font-size: 1rem;
+    }
+
+    #popupModal .btn-contactar {
+        padding: 12px 20px;
+        font-size: 16px;
+    }
+
+    #popupModal .close {
+        font-size: 24px;
+        top: 10px;
+        right: 15px;
+    }
 }
 
 /*******************************/
