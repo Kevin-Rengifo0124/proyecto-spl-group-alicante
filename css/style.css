@@ -1430,11 +1430,17 @@ a:focus {
 .portfolio .portfolio-img {
     position: relative;
     overflow: hidden;
+    aspect-ratio: 4/3; /* Mantiene proporción */
+    background-color: #f0f0f0; /* Fondo de imágenes no cargadas */
 }
 
 .portfolio .portfolio-img img {
     width: 100%;
-    transition: .3s;
+    min-height: 250px;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    transition: transform .3s ease;
 }
 
 .portfolio .portfolio-item:hover img {
@@ -1845,9 +1851,9 @@ a:focus {
         max-width: 90%;
         padding: 20px;
         border-radius: 15px;
-        top: auto;
+        top: 50%;
         /* Eliminar el efecto de desplazamiento en móviles */
-        transform: none;
+        transform: translateY(-50%);
     }
 }
 
@@ -2114,4 +2120,8 @@ a:focus {
         margin: 5px 0;
         text-align: center;
     }
+}
+
+.wow { 
+    visibility: hidden;
 }
