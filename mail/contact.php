@@ -30,20 +30,19 @@ $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
 // Configurar PHPMailer
 $mail = new PHPMailer(true);
 try {
-    // Configuración del servidor SMTP
-
-
+    // Configuración del servidor SMTP de IONOS
     $mail->isSMTP();
-    $mail->Host = 'smtp.gmail.com'; // Cambia a tu servidor de correo
+    $mail->Host = 'smtp.ionos.es'; // Servidor SMTP de IONOS
     $mail->SMTPAuth = true;
-    $mail->Username = 'krengifoo24@gmail.com'; // Cambia por tu dirección de correo
-    $mail->Password = 'dkuriqrdanzdgpnn'; // Cambia por tu contraseña
-    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-    $mail->Port = 587; // Puerto para TLS
+    $mail->Username = 'info@splgroup.es'; // Correo de IONOS
+    $mail->Password = 'TU_CONTRASEÑA'; // Cambia por la contraseña del correo
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; // Seguridad TLS
+    $mail->Port = 587; // Puerto SMTP de IONOS
 
     // Remitente y destinatario
-    $mail->setFrom($email, $name);
-    $mail->addAddress('stiven95rengifo@gmail.com'); // Cambia por el destinatario
+    $mail->setFrom('info@splgroup.es', 'SPL Group'); // El remitente debe ser el correo de IONOS
+    $mail->addReplyTo($email, $name); // Responder al correo del usuario
+    $mail->addAddress('info@splgroup.es'); // Dirección de destino
 
     // Contenido del correo
     $mail->isHTML(true);
