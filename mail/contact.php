@@ -1,65 +1,65 @@
 <?php
 
-require 'PHPMailer/src/PHPMailer.php';
-require 'PHPMailer/src/SMTP.php';
-require 'PHPMailer/src/Exception.php';
+echo $_POST['name'];
 
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
-
-// Verificar si los campos están completos y si el correo es válido
-if (
-    empty($_POST['name']) || 
-    empty($_POST['subject']) || 
-    empty($_POST['message']) || 
-    empty($_POST['phone']) || 
-    !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) ||
-    !isset($_POST['privacyPolicy'])
-) {
-    http_response_code(400);
-    echo json_encode(['error' => 'Por favor complete todos los campos y acepte la política de privacidad']);
+if (empty($_POST['name']) ||
+    empty($_POST['message']) ||
+   	empty($_POST['phone']) ||
+   	empty($_POST['email'])) {
+    echo 'Por favor, completa todos los campos correctamente.';
     exit;
 }
 
-$name = strip_tags($_POST['name']);
-$subject = strip_tags($_POST['subject']);
-$message = nl2br(htmlspecialchars($_POST['message']));
-$phone = strip_tags($_POST['phone']);
-$email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+require '../vendor/PHPMailer/src/Exception.php';
+require '../vendor/PHPMailer/src/PHPMailer.php';
+require '../vendor/PHPMailer/src/SMTP.php';
 
-// Configurar PHPMailer
-$mail = new PHPMailer(true);
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+
 try {
-    // Configuración del servidor SMTP de IONOS
+
+    // Crear una nueva instancia de PHPMailer con excepciones activadas
+    $mail = new PHPMailer(true);
     $mail->isSMTP();
-    $mail->Host = 'smtp.ionos.es'; // Servidor SMTP de IONOS
+    $mail->Host = 'smtp.ionos.es';
     $mail->SMTPAuth = true;
-    $mail->Username = 'info@splgroup.es'; // Correo de IONOS
-    $mail->Password = 'TU_CONTRASEÑA'; // Cambia por la contraseña del correo
-    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; // Seguridad TLS
-    $mail->Port = 587; // Puerto SMTP de IONOS
+    $mail->Username = 'info@splgroup.es';
+    $mail->Password = 'SplGroupes';
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+    $mail->Port = 587;
 
-    // Remitente y destinatario
-    $mail->setFrom('info@splgroup.es', 'SPL Group'); // El remitente debe ser el correo de IONOS
-    $mail->addReplyTo($email, $name); // Responder al correo del usuario
-    $mail->addAddress('info@splgroup.es'); // Dirección de destino
+    // Configuración de destinatarios
+    $mail->addAddress('krengifoo24@gmail.com');
 
-    // Contenido del correo
+    // Datos del formulario
+    $name = htmlspecialchars($_POST['name']);
+    $email = htmlspecialchars($_POST['email']);
+    $subject = htmlspecialchars($_POST['subject']);
+    $message = htmlspecialchars($_POST['message']);
+    $phone = htmlspecialchars($_POST['phone']);
+
+   // Configuración del remitente
+    $mail->setFrom($email);
+
+    // Configuración del contenido del correo
     $mail->isHTML(true);
-    $mail->Subject = "Consulta de $name: $subject";
-    $mail->Body    = "
-        <h2>Consulta de Contacto</h2>
+    $mail->Subject = 'Nuevo mensaje de: ' . $name;
+    $mail->Body = "
+        <h2>Nuevo mensaje del formulario web</h2>
         <p><strong>Nombre:</strong> $name</p>
+        <p><strong>Email:</strong> $email</p>
         <p><strong>Teléfono:</strong> $phone</p>
-        <p><strong>Correo Electrónico:</strong> $email</p>
-        <p><strong>Servicio:</strong> $subject</p>
-        <p><strong>Mensaje:</strong><br> $message</p>
+        <p><strong>Asunto:</strong> $subject</p>
+        <p><strong>Mensaje:</strong> $message</p>
     ";
-
+    $mail->AltBody = "Nuevo mensaje de $name. Email: $email. Teléfono: $phone. Asunto: $subject. Mensaje: $message.";
+   $mail->CharSet = 'UTF-8';
+    $mail->Encoding = 'base64';
     $mail->send();
-    echo json_encode(['success' => 'El mensaje se ha enviado correctamente']);
+    echo 'El correo ha sido enviado correctamente.';
 } catch (Exception $e) {
-    http_response_code(500);
-    echo json_encode(['error' => "El mensaje no pudo ser enviado. Error: {$mail->ErrorInfo}"]);
+    echo 'Error al enviar el correo: ' . $e->getMessage();
 }
 ?>

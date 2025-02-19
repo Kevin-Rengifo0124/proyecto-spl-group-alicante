@@ -10,18 +10,20 @@ $(function () {
             var email = $("input#email").val();
             var subject = $("input#subject").val();
             var message = $("textarea#message").val();
+            var phone = $("#phone").val();
 
             $this = $("#sendMessageButton");
             $this.prop("disabled", true);
 
             $.ajax({
-                url: "contact.php",
+                url: "https://splgroup.es/mail/contact.php",
                 type: "POST",
                 data: {
                     name: name,
                     email: email,
                     subject: subject,
-                    message: message
+                    message: message,
+                    phone: phone
                 },
                 headers: {
                     "accept": "application/json",
@@ -29,6 +31,7 @@ $(function () {
                 },
                 cache: false,
                 success: function () {
+                    console.log("Exito");
                     $('#success').html("<div class='alert alert-success'>");
                     $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
                         .append("</button>");
@@ -39,6 +42,8 @@ $(function () {
                     $('#contactForm').trigger("reset");
                 },
                 error: function () {
+                    console.log("Error");
+
                     $('#success').html("<div class='alert alert-danger'>");
                     $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
                         .append("</button>");
@@ -47,6 +52,8 @@ $(function () {
                     $('#contactForm').trigger("reset");
                 },
                 complete: function () {
+                    console.log("Completado");
+
                     setTimeout(function () {
                         $this.prop("disabled", false);
                     }, 1000);
