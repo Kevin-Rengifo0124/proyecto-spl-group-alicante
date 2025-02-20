@@ -31,7 +31,7 @@ try {
     $mail->Port = 587;
 
     // Configuración de destinatarios
-    $mail->addAddress('krengifoo24@gmail.com');
+    $mail->addAddress('krengifo0124@gmail.com');
 
     // Datos del formulario
     $name = htmlspecialchars($_POST['name']);
