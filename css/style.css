@@ -158,6 +158,7 @@ a:focus {
         text-align: center;
     }
 }
+
 /**********************************/
 /*********** Nav Bar CSS **********/
 /**********************************/
@@ -789,11 +790,11 @@ a:focus {
     justify-content: center;
     background: rgba(3, 15, 39, 0.7);
     transition: 0.5s;
-    opacity: 0;
+    opacity: 1;
 }
 
 .service .service-item:hover .service-overlay {
-    opacity: 1;
+    opacity: 0;
 }
 
 .service .service-overlay p {
@@ -846,6 +847,8 @@ a:focus {
 .service .service-item:hover a.btn {
     color: #ffffff;
 }
+
+
 
 /*******************************/
 /********** Video CSS **********/
@@ -1720,7 +1723,6 @@ a:focus {
     }
 }
 
-
 @media (max-width: 768px) {
 
     .contact .contact-form {
@@ -2227,7 +2229,6 @@ a:focus {
     transform: scale(1.05);
 }
 
-
 .portfolio-container {
     position: relative;
 }
@@ -2243,8 +2244,6 @@ a:focus {
     font-weight: bold;
     color: #333;
 }
-
-
 
 .texto-derecha {
     position: absolute;
