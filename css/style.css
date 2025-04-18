@@ -620,9 +620,14 @@ a:focus {
     margin-bottom: 30px;
 }
 
-.about .about-img {
-    position: relative;
+.about .about-img video {
+    width: 100%;
     height: 100%;
+    object-fit: cover;
+}
+
+.about .about-img {
+    height: 450px; /* o 400px si lo quieres más alto */
 }
 
 .about .about-img img {
@@ -656,9 +661,10 @@ a:focus {
 @media (max-width: 767.98px) {
     .about .about-img {
         margin-bottom: 30px;
-        height: auto;
+        height: 350px;
     }
 }
+
 
 /*******************************/
 /********** Fact CSS ***********/
@@ -757,7 +763,8 @@ a:focus {
     position: relative;
     overflow: hidden;
     width: 100%;
-    height: 400px; /* Mantiene la altura en pantallas grandes */
+    height: 400px;
+    /* Mantiene la altura en pantallas grandes */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -773,7 +780,8 @@ a:focus {
 
 @media (max-width: 768px) {
     .service .service-img {
-        height: 250px; /* Ajusta la altura en móviles */
+        height: 250px;
+        /* Ajusta la altura en móviles */
     }
 }
 
@@ -847,8 +855,6 @@ a:focus {
 .service .service-item:hover a.btn {
     color: #ffffff;
 }
-
-
 
 /*******************************/
 /********** Video CSS **********/
@@ -1455,8 +1461,10 @@ a:focus {
 .portfolio .portfolio-img {
     position: relative;
     overflow: hidden;
-    aspect-ratio: 4/3; /* Mantiene proporción */
-    background-color: #f0f0f0; /* Fondo de imágenes no cargadas */
+    aspect-ratio: 4/3;
+    /* Mantiene proporción */
+    background-color: #f0f0f0;
+    /* Fondo de imágenes no cargadas */
 }
 
 .portfolio .portfolio-img img {
@@ -2153,7 +2161,7 @@ a:focus {
     }
 }
 
-.wow { 
+.wow {
     visibility: hidden;
 }
 
@@ -2165,7 +2173,8 @@ a:focus {
     padding: 0;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;  /* Permite que los elementos se ajusten en varias líneas si es necesario */
+    flex-wrap: wrap;
+    /* Permite que los elementos se ajusten en varias líneas si es necesario */
     gap: 5px;
 }
 
@@ -2197,20 +2206,25 @@ a:focus {
 /* Para móviles: Mantener el menú horizontal */
 @media (max-width: 767px) {
     .portfolio-menu {
-        flex-wrap: nowrap; /* Evita que los elementos bajen de línea */
-        overflow-x: auto;  /* Agrega desplazamiento horizontal si es necesario */
+        flex-wrap: nowrap;
+        /* Evita que los elementos bajen de línea */
+        overflow-x: auto;
+        /* Agrega desplazamiento horizontal si es necesario */
         justify-content: flex-start;
         padding: 5px;
-        white-space: nowrap; /* Evita que los elementos se rompan */
+        white-space: nowrap;
+        /* Evita que los elementos se rompan */
     }
 
     .portfolio-menu::-webkit-scrollbar {
-        display: none; /* Oculta la barra de desplazamiento en Chrome y Safari */
+        display: none;
+        /* Oculta la barra de desplazamiento en Chrome y Safari */
     }
 
     .portfolio-menu li a {
         font-size: 13px;
-        padding: 6px 10px; /* Reduce el padding para más espacio */
+        padding: 6px 10px;
+        /* Reduce el padding para más espacio */
     }
 }
 
@@ -2268,7 +2282,8 @@ a:focus {
     display: flex;
     align-items: center;
     gap: 10px;
-    margin-bottom: 25px;  /* Espacio entre cada categoría */
+    margin-bottom: 25px;
+    /* Espacio entre cada categoría */
 }
 
 .icono {
@@ -2278,54 +2293,400 @@ a:focus {
 /* Mostrar categorías en iPads y ocultar en móviles */
 @media (max-width: 767px) {
     .categoria {
-        display: none; /* Oculta categorías en dispositivos móviles */
+        display: none;
+        /* Oculta categorías en dispositivos móviles */
     }
 }
 
 /* Reducir tamaño de categorías en iPads en modo vertical (hasta 834px) */
 @media (min-width: 768px) and (max-width: 834px) {
     .categoria {
-        font-size: 12px;         /* Ajusta el tamaño de texto */
-        padding: 5px;           /* Ajusta el padding dentro de la categoría */
-        margin-top: 15px;        /* Ajusta el espacio superior */
-        margin-bottom: 20px;     /* Ajusta el espacio inferior entre las categorías */
+        font-size: 12px;
+        /* Ajusta el tamaño de texto */
+        padding: 5px;
+        /* Ajusta el padding dentro de la categoría */
+        margin-top: 15px;
+        /* Ajusta el espacio superior */
+        margin-bottom: 20px;
+        /* Ajusta el espacio inferior entre las categorías */
     }
 
     .icono {
-        font-size: 20px; /* Ajusta el tamaño de los iconos */
+        font-size: 20px;
+        /* Ajusta el tamaño de los iconos */
     }
 
     .categoria:first-child {
-        margin-top: 3px; /* Ajusta el espacio superior solo para la primera categoría */
+        margin-top: 3px;
+        /* Ajusta el espacio superior solo para la primera categoría */
     }
 
     /* Ajuste para mover la última categoría hacia arriba en iPad */
     .categoria:last-child {
-        margin-top: -10px;  /* Ajusta este valor según el espacio deseado */
-        margin-bottom: 15px; /* Ajusta el margen inferior si es necesario */
+        margin-top: -10px;
+        /* Ajusta este valor según el espacio deseado */
+        margin-bottom: 15px;
+        /* Ajusta el margen inferior si es necesario */
     }
 }
 
 /* Reducir tamaño en iPads en modo horizontal (hasta 1194px) */
 @media (min-width: 835px) and (max-width: 1194px) {
     .categoria {
-        font-size: 12px;         /* Ajusta el tamaño de texto */
-        padding: 10px;           /* Ajusta el padding dentro de la categoría */
-        margin-top: 15px;        /* Ajusta el espacio superior */
-        margin-bottom: 20px;     /* Ajusta el espacio inferior entre las categorías */
+        font-size: 12px;
+        /* Ajusta el tamaño de texto */
+        padding: 10px;
+        /* Ajusta el padding dentro de la categoría */
+        margin-top: 15px;
+        /* Ajusta el espacio superior */
+        margin-bottom: 20px;
+        /* Ajusta el espacio inferior entre las categorías */
     }
 
     .icono {
-        font-size: 12px; /* Ajusta el tamaño de los iconos */
+        font-size: 12px;
+        /* Ajusta el tamaño de los iconos */
     }
 
     .categoria:first-child {
-        margin-top: 15px; /* Ajusta el espacio superior solo para la primera categoría */
+        margin-top: 15px;
+        /* Ajusta el espacio superior solo para la primera categoría */
     }
 
     /* Ajuste para mover la última categoría hacia arriba en iPad */
     .categoria:last-child {
-        margin-top: -10px;  /* Ajusta este valor según el espacio deseado */
-        margin-bottom: 15px; /* Ajusta el margen inferior si es necesario */
+        margin-top: -10px;
+        /* Ajusta este valor según el espacio deseado */
+        margin-bottom: 15px;
+        /* Ajusta el margen inferior si es necesario */
     }
 }
+
+/**********************************************/
+/********* Carrousel Blog New CSS **********/
+/**********************************************/
+.carousel-wrapper {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    /* <-- agregar esto */
+}
+
+.carousel-header {
+    position: absolute;
+    top: 40px;
+    text-align: center;
+    z-index: 10;
+}
+
+.carousel-header p {
+    color: #030f27;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.carousel-header h2 {
+    margin: 0;
+    position: relative;
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.carousel-container {
+    height: 400px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: start;
+}
+
+.carousel-card {
+    width: 80px;
+    border-radius: .75rem;
+    background-size: cover;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 2rem;
+    margin: 0 10px;
+    display: flex;
+    align-items: flex-end;
+    transition: .6s cubic-bezier(.28, -0.03, 0, .99);
+    box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.8);
+}
+
+.carousel-card>.carousel-row {
+    color: white;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.carousel-card>.carousel-row>.carousel-icon {
+    margin: 5px;
+}
+
+.carousel-card>.carousel-row>.carousel-description {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    height: 80px;
+    width: 520px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition-delay: .3s;
+    transition: all .3s ease;
+}
+
+.carousel-description p {
+    color: #b0b0ba;
+    padding-top: 5px;
+}
+
+.carousel-description h4 {
+    text-transform: uppercase;
+}
+
+input {
+    display: none;
+}
+
+input:checked+label {
+    width: 600px;
+}
+
+input:checked+label .carousel-description {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+.carousel-card[for="carousel1"] {
+    background-image: url('../images-spl-group/ultimos-proyectos.jpeg');
+}
+
+.carousel-card[for="carousel2"] {
+    background-image: url('../images-spl-group/ultimos-proyectos2.jpeg');
+}
+
+.carousel-card[for="carousel3"] {
+    background-image: url('../images-spl-group/ultimos-proyectos3.jpeg');
+}
+
+.carousel-card[for="carousel4"] {
+    background-image: url('../images-spl-group/ultimosproyectos4.jpeg');
+}
+
+/* Responsiveness */
+@media (max-width: 1024px) {
+    .carousel-container {
+        justify-content: center;
+    }
+
+    .carousel-card {
+        width: 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel-container {
+        overflow-x: auto;
+        justify-content: start;
+    }
+
+    .carousel-card {
+        width: 80px;
+    }
+
+    input:checked + label {
+        width: 90vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-container {
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+    }
+
+    .carousel-card {
+        width: 70px;
+    }
+
+    input:checked + label {
+        width: 85vw;
+    }
+}
+
+/*Ajuste SOLO para pantallas muy pequeñas como Galaxy S8 */
+@media (max-width: 360px) {
+    .carousel-header h2 {
+        font-size: 32px;
+        line-height: 1.2;
+    }
+}
+
+/*Ajuste para que el header no se corte en pantallas grandes al hacer scroll */
+@media (min-width: 1025px) {
+    .carousel-header {
+        top: 60px;
+    }
+}
+
+/*Asegura que el header siempre tenga espacio en cualquier pantalla */
+.carousel-wrapper {
+    padding-top: 120px; /* Esto evita que el título se corte al hacer scroll */
+}
+
+
+/**********************************************/
+/*********  Galery CSS **********/
+/**********************************************/
+.galeria-flip {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    margin-bottom: 50px;
+}
+
+.galeria-flip .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 250px;
+    gap: 20px;
+}
+
+.flip-card {
+    background-color: transparent;
+    perspective: 1000px;
+    width: 100%;
+    height: 100%;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.flip-card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.flip-card-back {
+    background-color: #030f27;
+    color: white;
+    transform: rotateY(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.flip-card-back h3 {
+    margin: 0;
+}
+
+.galeria-flip p {
+    text-align: center;
+    font-weight: 600;
+    font-size: 18px;
+    color: #030f27;
+    margin-bottom: 5px;
+}
+
+.galeria-flip h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 30px;
+    font-weight: 700;
+    color: #030f27;
+}
+
+.flip-card-back {
+    background-color: #030f27;
+    color: white;
+    transform: rotateY(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .flip-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    max-width: 90%;
+  }
+  
+  .flip-content p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.4;
+    color: white;
+  }
+  
+  .flip-btn {
+    padding: 8px 18px;
+    border: 1px solid white;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+  }
+  
+  .flip-btn:hover {
+    background-color: white;
+    color: #030f27;
+  }
+  
+  .front-title {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: rgba(3, 15, 39, 0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+/* 🔁 Responsividad */
+@media (max-width: 1024px) {
+    .galeria-flip .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 200px;
+    }
+}
+
+@media (max-width: 600px) {
+    .galeria-flip .gallery {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 200px;
+    }
+}    

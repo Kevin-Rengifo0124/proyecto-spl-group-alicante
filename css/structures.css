@@ -2575,10 +2575,11 @@ a:focus {
     margin-bottom: 15px;
 }
 
-.content-section-alt .text:hover {
-    transform: translate(-80%, -52%);
-    /* Sube un poquito al hacer hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+@media (min-width: 769px) {
+    .content-section-alt .text:hover {
+        transform: translate(-80%, -52%);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
 }
 .subtitle {
     display: block;
@@ -2739,6 +2740,8 @@ a:focus {
         font-size: 20px;
     }
 }
+
+
 
 /**********************************************/
 /*************** Carrousel *******************/
