@@ -768,6 +768,7 @@ a:focus {
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 12px;
 }
 
 .service .service-img img {
@@ -2400,6 +2401,7 @@ a:focus {
     width: 80px;
     border-radius: .75rem;
     background-size: cover;
+    background-position: center center; /* ✅ esto centra la imagen */
     cursor: pointer;
     overflow: hidden;
     border-radius: 2rem;
@@ -2460,7 +2462,7 @@ input:checked+label .carousel-description {
 }
 
 .carousel-card[for="carousel2"] {
-    background-image: url('../images-spl-group/ultimos-proyectos2.jpeg');
+    background-image: url('../images-spl-group/ultimos-proyectos5.jpeg');
 }
 
 .carousel-card[for="carousel3"] {
@@ -2469,6 +2471,14 @@ input:checked+label .carousel-description {
 
 .carousel-card[for="carousel4"] {
     background-image: url('../images-spl-group/ultimosproyectos4.jpeg');
+}
+
+.carousel-card[for="carousel5"] {
+    background-image: url('../images-spl-group/ultimos-proyectos6.jpeg');
+}
+
+.carousel-card[for="carousel6"] {
+    background-image: url('../images-spl-group/ultimos-proyectos7.jpeg');
 }
 
 /* Responsiveness */
@@ -2531,7 +2541,6 @@ input:checked+label .carousel-description {
 .carousel-wrapper {
     padding-top: 120px; /* Esto evita que el título se corte al hacer scroll */
 }
-
 
 /**********************************************/
 /*********  Galery CSS **********/
