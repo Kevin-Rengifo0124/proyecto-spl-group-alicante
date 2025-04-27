@@ -2737,9 +2737,9 @@ a:focus {
 
 
 
-/**********************************************/
+/***********************************************/
 /*************** Carrousel *******************/
-/**********************************************/
+/***********************************************/
 
 .carrusel-container {
     position: relative;
@@ -2761,13 +2761,13 @@ a:focus {
     background-color: #021f4a;
     width: 300px;
     height: 450px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Sombra inicial */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* He eliminado la sombra inicial */
+    transition: transform 0.3s ease; /* Mantiene solo la transición de transform */
 }
 
 .elemento:hover {
     transform: scale(1.05); /* Efecto de realce */
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5); /* Sombra más pronunciada */
+    /* He eliminado la sombra en hover */
 }
 
 .elemento img {
@@ -2775,6 +2775,7 @@ a:focus {
     height: 100%;
     object-fit: cover; /* Ajusta la imagen sin deformarla */
 }
+
 /* Botones de navegación */
 .boton {
     position: absolute;

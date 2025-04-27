@@ -2493,32 +2493,56 @@ input:checked+label .carousel-description {
 }
 
 @media (max-width: 768px) {
+    .carousel-wrapper {
+        height: auto;
+        min-height: 600px;
+        padding-top: 100px;
+    }
+
     .carousel-container {
-        overflow-x: auto;
-        justify-content: start;
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+        overflow-x: hidden;
+        overflow-y: auto;
+        padding-bottom: 20px;
     }
 
     .carousel-card {
-        width: 80px;
+        width: 90vw;
+        height: 120px;
+        margin: 5px 0;
+        background-position: center;
+        transition: height 0.6s cubic-bezier(.28, -0.03, 0, .99);
     }
 
     input:checked + label {
         width: 90vw;
+        height: 300px;
+    }
+
+    .carousel-card > .carousel-row > .carousel-description {
+        width: 80vw;
     }
 }
 
 @media (max-width: 480px) {
-    .carousel-container {
-        flex-wrap: nowrap;
-        overflow-x: scroll;
+    .carousel-header h2 {
+        font-size: 36px;
+    }
+
+    .carousel-wrapper {
+        min-height: 500px;
     }
 
     .carousel-card {
-        width: 70px;
+        width: 85vw;
+        height: 100px;
     }
 
     input:checked + label {
         width: 85vw;
+        height: 250px;
     }
 }
 
@@ -2527,6 +2551,14 @@ input:checked+label .carousel-description {
     .carousel-header h2 {
         font-size: 32px;
         line-height: 1.2;
+    }
+    
+    .carousel-card {
+        height: 90px;
+    }
+    
+    input:checked + label {
+        height: 220px;
     }
 }
 
