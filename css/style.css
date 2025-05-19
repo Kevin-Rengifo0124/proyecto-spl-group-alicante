@@ -2574,6 +2574,20 @@ input:checked+label .carousel-description {
     padding-top: 120px; /* Esto evita que el título se corte al hacer scroll */
 }
 
+@media (max-width: 768px) {
+    .carousel-card {
+        box-shadow: 0px 5px 15px -5px rgba(0, 0, 0, 0.3);
+    }
+}
+
+/* Para dispositivos aún más pequeños */
+@media (max-width: 480px) {
+    .carousel-card {
+        box-shadow: 0px 3px 10px -3px rgba(0, 0, 0, 0.2);
+    }
+}
+
+
 /**********************************************/
 /*********  Galery CSS **********/
 /**********************************************/
@@ -2724,3 +2738,5 @@ input:checked+label .carousel-description {
         grid-auto-rows: 200px;
     }
 }    
+
+
