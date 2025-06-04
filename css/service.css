@@ -627,8 +627,7 @@ a:focus {
 }
 
 .about .about-img {
-    height: 450px;
-    /* o 400px si lo quieres más alto */
+    height: 450px; /* o 400px si lo quieres más alto */
 }
 
 .about .about-img img {
@@ -2402,8 +2401,7 @@ a:focus {
     width: 80px;
     border-radius: .75rem;
     background-size: cover;
-    background-position: center center;
-    /* ✅ esto centra la imagen */
+    background-position: center center; /* ✅ esto centra la imagen */
     cursor: pointer;
     overflow: hidden;
     border-radius: 2rem;
@@ -2518,12 +2516,12 @@ input:checked+label .carousel-description {
         transition: height 0.6s cubic-bezier(.28, -0.03, 0, .99);
     }
 
-    input:checked+label {
+    input:checked + label {
         width: 90vw;
         height: 300px;
     }
 
-    .carousel-card>.carousel-row>.carousel-description {
+    .carousel-card > .carousel-row > .carousel-description {
         width: 80vw;
     }
 }
@@ -2542,7 +2540,7 @@ input:checked+label .carousel-description {
         height: 100px;
     }
 
-    input:checked+label {
+    input:checked + label {
         width: 85vw;
         height: 250px;
     }
@@ -2554,12 +2552,12 @@ input:checked+label .carousel-description {
         font-size: 32px;
         line-height: 1.2;
     }
-
+    
     .carousel-card {
         height: 90px;
     }
-
-    input:checked+label {
+    
+    input:checked + label {
         height: 220px;
     }
 }
@@ -2573,9 +2571,22 @@ input:checked+label .carousel-description {
 
 /*Asegura que el header siempre tenga espacio en cualquier pantalla */
 .carousel-wrapper {
-    padding-top: 120px;
-    /* Esto evita que el título se corte al hacer scroll */
+    padding-top: 120px; /* Esto evita que el título se corte al hacer scroll */
 }
+
+@media (max-width: 768px) {
+    .carousel-card {
+        box-shadow: 0px 5px 15px -5px rgba(0, 0, 0, 0.3);
+    }
+}
+
+/* Para dispositivos aún más pequeños */
+@media (max-width: 480px) {
+    .carousel-card {
+        box-shadow: 0px 3px 10px -3px rgba(0, 0, 0, 0.2);
+    }
+}
+
 
 /**********************************************/
 /*********  Galery CSS **********/
@@ -2670,24 +2681,24 @@ input:checked+label .carousel-description {
     text-align: center;
     padding: 20px;
     box-sizing: border-box;
-}
-
-.flip-content {
+  }
+  
+  .flip-content {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 15px;
     max-width: 90%;
-}
-
-.flip-content p {
+  }
+  
+  .flip-content p {
     margin: 0;
     font-size: 14px;
     line-height: 1.4;
     color: white;
-}
-
-.flip-btn {
+  }
+  
+  .flip-btn {
     padding: 8px 18px;
     border: 1px solid white;
     color: white;
@@ -2695,14 +2706,14 @@ input:checked+label .carousel-description {
     border-radius: 5px;
     font-size: 14px;
     transition: all 0.3s ease;
-}
-
-.flip-btn:hover {
+  }
+  
+  .flip-btn:hover {
     background-color: white;
     color: #030f27;
-}
-
-.front-title {
+  }
+  
+  .front-title {
     position: absolute;
     bottom: 10px;
     left: 10px;
@@ -2712,8 +2723,7 @@ input:checked+label .carousel-description {
     border-radius: 5px;
     font-size: 14px;
     font-weight: 500;
-}
-
+  }
 /* 🔁 Responsividad */
 @media (max-width: 1024px) {
     .galeria-flip .gallery {
@@ -2727,94 +2737,311 @@ input:checked+label .carousel-description {
         grid-template-columns: 1fr;
         grid-auto-rows: 200px;
     }
+}    
+
+
+/***********************************************/ 
+/*************** Carrousel New *******************/
+/***********************************************/ 
+.carousel-section {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-/**********************************************/
-/*********  Slider CSS **********/
-/**********************************************/
-.slider-container {
+.section-title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.2rem;
+    color: #030f27;
+    font-weight: 600;
     position: relative;
-    overflow: hidden;
-    width: 100vw;
-    height: 100vh;
+    padding-bottom: 15px;
 }
 
-.left-slide {
-    height: 100%;
-    width: 35%;
+.section-title::after {
+    content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    transition: transform 0.5s ease-in-out;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(to right, #030f27, #030f27);
+    border-radius: 2px;
 }
 
-.left-slide>div {
-    height: 100%;
-    width: 100%;
+.container-carrusel {
+    max-width: 1200px;
+    width: 95%;
+    margin: 0 auto 40px;
+    position: relative;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 30px 20px;
+    overflow: hidden;
+}
+
+/* Enhanced slider wrapper with subtle pattern background */
+.slider-wrapper {
+    position: relative;
+    margin-bottom: 25px;
+    background-color: rgba(248, 249, 250, 0.7);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Beautiful navigation buttons */
+.slider-wrapper .slide-button {
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    border: none;
+    outline: none;
+    background: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+    backdrop-filter: blur(4px);
 }
 
-.left-slide h1 {
-    font-size: 40px;
-    margin-bottom: 10px;
-    margin-top: -30px;
+.slider-wrapper .slide-button:hover {
+    background: rgba(0, 0, 0, 0.75);
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
-.right-slide {
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 35%;
-    width: 65%;
-    transition: transform 0.5s ease-in-out;
+.slider-wrapper .slide-button:active {
+    transform: translateY(-50%) scale(0.95);
 }
 
-.right-slide>div {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    height: 100%;
-    width: 100%;
+.slider-wrapper .slide-button#prev-slide {
+    left: 20px;
 }
 
-button {
-    background-color: #fff;
-    border: none;
-    color: #aaa;
+.slider-wrapper .slide-button#next-slide {
+    right: 20px;
+}
+
+/* Custom arrow icons using CSS */
+.slider-wrapper .slide-button::after {
+    content: '';
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-top: 3px solid white;
+    border-right: 3px solid white;
+    position: relative;
+}
+
+.slider-wrapper .slide-button#prev-slide::after {
+    transform: rotate(-135deg);
+    left: 3px;
+}
+
+.slider-wrapper .slide-button#next-slide::after {
+    transform: rotate(45deg);
+    right: 3px;
+}
+
+/* Improved image list with smooth scrolling */
+.slider-wrapper .image-list {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    scroll-snap-type: x mandatory;
+    padding: 20px 10px;
+    scroll-behavior: smooth;
+}
+
+.slider-wrapper .image-list::-webkit-scrollbar {
+    display: none;
+}
+
+/* Enhanced image items with beautiful hover effects */
+.slider-wrapper .image-list .image-item {
+    flex: 0 0 auto;
+    width: 350px;
+    height: 420px;
+    object-fit: cover;
+    scroll-snap-align: center;
+    border-radius: 8px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
     cursor: pointer;
-    font-size: 16px;
-    padding: 15px;
+    position: relative;
+    overflow: hidden;
 }
 
-button:hover {
-    color: #222;
+.slider-wrapper .image-list .image-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
-button:focus {
-    outline: none;
-}
-
-.slider-container .action-buttons button {
+/* Caption overlay for images (optional) */
+.image-item::after {
+    content: "";
     position: absolute;
-    left: 35%;
-    top: 50%;
-    z-index: 100;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
-.slider-container .action-buttons .down-button {
-    transform: translateX(-100%);
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
+.image-item:hover::after {
+    opacity: 1;
 }
 
-.slider-container .action-buttons .up-button {
-    transform: translateY(-100%);
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
+/* Beautiful scrollbar with gradient */
+.slider-scrollbar {
+    height: 24px;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.slider-scrollbar .scrollbar-track {
+    height: 4px;
+    width: 100%;
+    background: #eaeaea;
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.slider-scrollbar:hover .scrollbar-track {
+    height: 6px;
+}
+
+.slider-scrollbar .scrollbar-thumb {
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    background: linear-gradient(to right, #030f27, #030f27);
+    border-radius: inherit;
+    cursor: grab;
+    left: 0;
+    transition: height 0.2s ease;
+}
+
+.slider-scrollbar .scrollbar-thumb:active {
+    cursor: grabbing;
+    height: 10px;
+    top: -2px;
+    background: linear-gradient(to right, #030f27, #030f27);
+}
+
+.slider-scrollbar .scrollbar-thumb::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -10px;
+    bottom: -10px;
+}
+
+/* Add class for when dragging */
+.image-list.dragging {
+    scroll-behavior: auto !important;
+    cursor: grabbing;
+}
+
+/* Image counter indicator (optional) */
+.image-counter {
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    margin-top: 15px;
+}
+
+/* Progress dots indicator (optional alternative to scrollbar) */
+.progress-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.progress-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ccc;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.progress-dot.active {
+    background-color: #ff7600;
+    transform: scale(1.3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .slider-wrapper .image-list .image-item {
+        width: 320px;
+        height: 400px;
+    }
+}
+
+@media (max-width: 1023px) {
+    .slider-wrapper .slide-button {
+        height: 50px;
+        width: 50px;
+    }
+    
+    .slider-wrapper .image-list {
+        gap: 15px;
+        padding: 15px 5px;
+    }
+    
+    .slider-wrapper .image-list .image-item {
+        width: 280px;
+        height: 350px;
+    }
+    
+    .slider-scrollbar .scrollbar-thumb {
+        width: 30%;
+    }
+}
+
+@media (max-width: 767px) {
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .container-carrusel {
+        width: 92%;
+        padding: 20px 10px;
+    }
+    
+    .slider-wrapper .slide-button {
+        display: none !important;
+    }
+    
+    .slider-wrapper .image-list {
+        gap: 12px;
+        padding: 10px 5px;
+    }
+    
+    .slider-wrapper .image-list .image-item {
+        width: 240px;
+        height: 300px;
+    }
 }
 
 /**********************************************/
@@ -2946,164 +3173,5 @@ button:focus {
     .section-header h2 {
         font-size: 2rem;
     }
-}
-
-/**********************************************/
-/********* Carousel 3D CSS **********/
-/**********************************************/
-
-.carousel-container {
-    width: 100%;
-    overflow: hidden;
-    padding: 40px 0;
-}
-
-.slider {
-    width: 100%;
-    position: relative;
-}
-
-.slider input {
-    display: none;
-}
-
-.maintenances {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    min-height: 450px;
-    /* Aumentado para más altura */
-    perspective: 1000px;
-    overflow: hidden;
-}
-
-.maintenances .item {
-    width: 300px;
-    height: 400px;
-    /* Altura fija para los elementos */
-    padding: 30px;
-    border-radius: 5px;
-    background-color: #030f27;
-    position: absolute;
-    border: 3px solid white;
-    top: 0;
-    box-sizing: border-box;
-    text-align: center;
-    transition: transform 0.4s;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    user-select: none;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.maintenances .item img {
-    max-width: 100%;
-    height: auto;
-    max-height: 250px;
-    /* Control de altura para la imagen */
-    object-fit: cover;
-    /* Mantiene la proporción */
-    border-radius: 3px;
-    margin-bottom: 10px;
-}
-
-.maintenances .item h1 {
-    font-size: 60px;
-    /* Reducido para dar espacio a imágenes */
-    color: white;
-    margin-top: 0;
-}
-
-.dots {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-}
-
-.dots label {
-    height: 5px;
-    width: 5px;
-    border-radius: 50%;
-    cursor: pointer;
-    background-color: #413B52;
-    margin: 7px;
-    transition: all 0.2s;
-}
-
-/* Active dots */
-#t-1:checked~.dots label[for="t-1"],
-#t-2:checked~.dots label[for="t-2"],
-#t-3:checked~.dots label[for="t-3"],
-#t-4:checked~.dots label[for="t-4"],
-#t-5:checked~.dots label[for="t-5"] {
-    transform: scale(2);
-    background-color: #030f27;
-    box-shadow: 0px 0px 0px 3px rgba(221, 221, 221, 0.24);
-}
-
-/* Adjacent dots */
-#t-1:checked~.dots label[for="t-2"],
-#t-2:checked~.dots label[for="t-1"],
-#t-2:checked~.dots label[for="t-3"],
-#t-3:checked~.dots label[for="t-2"],
-#t-3:checked~.dots label[for="t-4"],
-#t-4:checked~.dots label[for="t-3"],
-#t-4:checked~.dots label[for="t-5"],
-#t-5:checked~.dots label[for="t-4"] {
-    transform: scale(1.5);
-}
-
-/* Position for far right item (2 positions away) */
-#t-1:checked~.maintenances label[for="t-3"],
-#t-2:checked~.maintenances label[for="t-4"],
-#t-3:checked~.maintenances label[for="t-5"],
-#t-4:checked~.maintenances label[for="t-1"],
-#t-5:checked~.maintenances label[for="t-2"] {
-    transform: translate3d(600px, 0, -180px) rotateY(-25deg);
-    z-index: 2;
-}
-
-/* Position for right item (1 position away) */
-#t-1:checked~.maintenances label[for="t-2"],
-#t-2:checked~.maintenances label[for="t-3"],
-#t-3:checked~.maintenances label[for="t-4"],
-#t-4:checked~.maintenances label[for="t-5"],
-#t-5:checked~.maintenances label[for="t-1"] {
-    transform: translate3d(300px, 0, -90px) rotateY(-15deg);
-    z-index: 3;
-}
-
-/* Position for left item (1 position away) */
-#t-2:checked~.maintenances label[for="t-1"],
-#t-3:checked~.maintenances label[for="t-2"],
-#t-4:checked~.maintenances label[for="t-3"],
-#t-5:checked~.maintenances label[for="t-4"],
-#t-1:checked~.maintenances label[for="t-5"] {
-    transform: translate3d(-300px, 0, -90px) rotateY(15deg);
-    z-index: 3;
-}
-
-/* Position for far left item (2 positions away) */
-#t-3:checked~.maintenances label[for="t-1"],
-#t-4:checked~.maintenances label[for="t-2"],
-#t-5:checked~.maintenances label[for="t-3"],
-#t-1:checked~.maintenances label[for="t-4"],
-#t-2:checked~.maintenances label[for="t-5"] {
-    transform: translate3d(-600px, 0, -180px) rotateY(25deg);
-    z-index: 2;
-}
-
-/* Active item (center) */
-#t-1:checked~.maintenances label[for="t-1"],
-#t-2:checked~.maintenances label[for="t-2"],
-#t-3:checked~.maintenances label[for="t-3"],
-#t-4:checked~.maintenances label[for="t-4"],
-#t-5:checked~.maintenances label[for="t-5"] {
-    z-index: 4;
-    transform: translate3d(0, 0, 0) rotateY(0deg);
 }
 

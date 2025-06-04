@@ -29,6 +29,7 @@
 
     <!-- Template Stylesheet -->
     <link href="../css/service.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -89,6 +90,7 @@
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Servicios</a>
                                 <div class="dropdown-menu">
                                     <a href="reforms.html" class="dropdown-item">Reformas</a>
+                                    <a href="service.html" class="dropdown-item">Mantenimiento</a>
                                 </div>
                             </div>
                         </div>
@@ -101,50 +103,54 @@
         </div>
         <!-- Nav Bar End -->
 
-        <!-- Slider Start-->
-        <div class="slider-container">
-            <div class="left-slide">
-                <div style="background-color: #FD3555">
-                    <h1>Nature flower</h1>
-                    <p>all in pink</p>
+        <!-- Carousel Start -->
+        <div id="carousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carousel" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel" data-slide-to="1"></li>
+                <li data-target="#carousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="../images-spl-group/fontaneria2.jpg" alt="Carousel Image">
+                    <div class="carousel-caption">
+                        <p class="animated fadeInRight">Soluciones confiables para tus necesidades diarias</p>
+                        <h1 class="animated fadeInLeft">Expertos en fontanería y mantenimiento integral para un futuro
+                            sin preocupaciones</h1>
+
+                        <a class="btn animated fadeInUp" href="contact.html">Consultar</a>
+                    </div>
                 </div>
-                <div style="background-color: #2A86BA">
-                    <h1>Bluuue Sky</h1>
-                    <p>with it's mountains</p>
+
+                <div class="carousel-item">
+                    <img src="../images-spl-group/pintor.jpg" alt="Carousel Image">
+                    <div class="carousel-caption">
+                        <p class="animated fadeInRight">Damos color a tus ideas</p>
+                        <h1 class="animated fadeInLeft">Con calidad y dedicación en Alicante</h1>
+                        <a class="btn animated fadeInUp" href="contact.html">Consultar</a>
+                    </div>
                 </div>
-                <div style="background-color: #252E33">
-                    <h1>Lonely castle</h1>
-                    <p>in the wilderness</p>
-                </div>
-                <div style="background-color: #FFB866">
-                    <h1>Flying eagle</h1>
-                    <p>in the sunset</p>
+
+                <div class="carousel-item">
+                    <img src="../images-spl-group/electricidad-carrusel.jpg" alt="Carousel Image">
+                    <div class="carousel-caption">
+                        <p class="animated fadeInRight">Soluciones eléctricas a tu medida</p>
+                        <h1 class="animated fadeInLeft">Resultados excepcionales con calidad y seguridad</h1>
+                        <a class="btn animated fadeInUp" href="contact.html">Consultar</a>
+                    </div>
                 </div>
             </div>
-            <div class="right-slide">
-                <div
-                    style="background-image: url('https://images.unsplash.com/photo-1508768787810-6adc1f613514?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e27f6661df21ed17ab5355b28af8df4e&auto=format&fit=crop&w=1350&q=80')">
-                </div>
-                <div
-                    style="background-image: url('https://images.unsplash.com/photo-1519981593452-666cf05569a9?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=90ed8055f06493290dad8da9584a13f7&auto=format&fit=crop&w=715&q=80')">
-                </div>
-                <div
-                    style="background-image: url('https://images.unsplash.com/photo-1486899430790-61dbf6f6d98b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=8ecdee5d1b3ed78ff16053b0227874a2&auto=format&fit=crop&w=1002&q=80')">
-                </div>
-                <div
-                    style="background-image: url('https://images.unsplash.com/photo-1510942201312-84e7962f6dbb?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=da4ca7a78004349f1b63f257e50e4360&auto=format&fit=crop&w=1050&q=80')">
-                </div>
-            </div>
-            <div class="action-buttons">
-                <button class="down-button">
-                    <i class="fas fa-arrow-down"></i>
-                </button>
-                <button class="up-button">
-                    <i class="fas fa-arrow-up"></i>
-                </button>
-            </div>
+
+            <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
         </div>
-        <!-- Slider End-->
+        <!-- Carousel End -->
 
         <!-- Feature Start-->
         <div class="feature wow fadeInUp" data-wow-delay="0.1s">
@@ -301,48 +307,46 @@
         </div>
         <!-- Video End -->
 
-        <!-- Carousel Start -->
-        <div class="carousel-container">
-            <div class="slider">
-                <input type="radio" name="maintenance" id="t-1">
-                <input type="radio" name="maintenance" id="t-2">
-                <input type="radio" name="maintenance" id="t-3" checked>
-                <input type="radio" name="maintenance" id="t-4">
-                <input type="radio" name="maintenance" id="t-5">
+        <!-- Carrousel Start -->
+        <section class="carousel-section">
+            <h2 class="section-title">Mantenimiento y Reparaciones</h2>
 
-                <div class="maintenances">
-                    <label class="item" for="t-1">
-                        <img src="ruta/a/tu/imagen1.jpg" alt="Imagen 1">
-                        <h1>1</h1>
-                    </label>
-                    <label class="item" for="t-2">
-                        <img src="ruta/a/tu/imagen2.jpg" alt="Imagen 2">
-                        <h1>2</h1>
-                    </label>
-                    <label class="item" for="t-3">
-                        <img src="ruta/a/tu/imagen3.jpg" alt="Imagen 3">
-                        <h1>3</h1>
-                    </label>
-                    <label class="item" for="t-4">
-                        <img src="ruta/a/tu/imagen4.jpg" alt="Imagen 4">
-                        <h1>4</h1>
-                    </label>
-                    <label class="item" for="t-5">
-                        <img src="ruta/a/tu/imagen5.jpg" alt="Imagen 5">
-                        <h1>5</h1>
-                    </label>
+            <div class="container-carrusel">
+                <div class="slider-wrapper">
+                    <button id="prev-slide" class="slide-button"></button>
+                    <div class="image-list">
+                        <img src="../images-spl-group/pintura.jpg" alt="Construction project 1" class="image-item">
+                        <img src="../images-spl-group/electricidad1.jpeg" alt="Construction project 2"
+                            class="image-item">
+                        <img src="../images-spl-group/fontaneria.jpeg" alt="Construction project 3" class="image-item">
+                        <img src="../images-spl-group/mamparas.jpeg" alt="Construction project 4" class="image-item">
+                        <img src="../images-spl-group/Montaje.jpeg" alt="Construction project 5" class="image-item">
+                        <img src="../images-spl-group/carpinteria.jpeg" alt="Construction project 6" class="image-item">
+                    </div>
+                    <button id="next-slide" class="slide-button"></button>
                 </div>
 
-                <div class="dots">
-                    <label for="t-1"></label>
-                    <label for="t-2"></label>
-                    <label for="t-3"></label>
-                    <label for="t-4"></label>
-                    <label for="t-5"></label>
+                <div class="slider-scrollbar">
+                    <div class="scrollbar-track">
+                        <div class="scrollbar-thumb"></div>
+                    </div>
                 </div>
+
+                <!-- Optional: Image counter or progress dots -->
+                <!-- <div class="image-counter">1 of 6</div> -->
+                <!-- 
+                <div class="progress-dots">
+                    <div class="progress-dot active"></div>
+                    <div class="progress-dot"></div>
+                    <div class="progress-dot"></div>
+                    <div class="progress-dot"></div>
+                    <div class="progress-dot"></div>
+                    <div class="progress-dot"></div>
+                </div>
+                -->
             </div>
-        </div>
-        <!-- Carousel End -->
+        </section>
+        <!-- Carrousel Start -->
 
         <div class="portfolio">
             <div class="container">
@@ -351,7 +355,7 @@
                     <h2>Nuestro Catálogo De Multiservicios </h2>
                 </div>
                 <div class="row portfolio-container">
-        
+
                     <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item second wow fadeInUp" data-wow-delay="0.2s">
                         <div class="portfolio-warp">
                             <div class="portfolio-img">
@@ -360,7 +364,8 @@
                                     <img src="../images-spl-group/reformas-cocina-servicios.jpg" alt="Image">
                                     <div class="portfolio-overlay">
                                         <p>
-                                            Si tu cocina está anticuada, deteriorada o no cumple con tus expectativas, ha
+                                            Si tu cocina está anticuada, deteriorada o no cumple con tus expectativas,
+                                            ha
                                             llegado el momento de reformarla.
                                         </p>
                                     </div>
@@ -373,7 +378,7 @@
                             </div>
                         </div>
                     </div>
-        
+
                     <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item third wow fadeInUp" data-wow-delay="0.3s">
                         <div class="portfolio-warp">
                             <div class="portfolio-img">
@@ -395,7 +400,7 @@
                             </div>
                         </div>
                     </div>
-        
+
                     <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item fourth wow fadeInUp" data-wow-delay="0.3s">
                         <div class="portfolio-warp">
                             <div class="portfolio-img">
@@ -426,74 +431,63 @@
             </div>
         </div>
         <!-- Portfolio End -->
+
         <!-- Footer Start -->
         <div class="footer wow fadeIn" data-wow-delay="0.3s">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6 col-lg-3">
+                    <div class="col-md-4">
                         <div class="footer-contact">
                             <h2>Contacto</h2>
-                            <p><i class="fa fa-map-marker-alt"></i>""</p>
+                            <p><i class="fa fa-map-marker-alt"></i>Calle Lo Blanc, 18, 03187 Los Montesinos, Alicante,
+                                España</p>
                             <p><i class="fa fa-phone-alt"></i>+34 604 40 76 05</p>
                             <p><i class="fa fa-envelope"></i>info@splgroup.es</p>
                             <div class="footer-social">
-                                <a href=""><i class="fab fa-twitter"></i></a>
-                                <a href=""><i class="fab fa-facebook-f"></i></a>
-                                <a href=""><i class="fab fa-youtube"></i></a>
-                                <a href=""><i class="fab fa-instagram"></i></a>
-                                <a href=""><i class="fab fa-linkedin-in"></i></a>
+                                <a href="https://www.facebook.com/splgroup.spain/?locale=hi_IN"><i
+                                        class="fab fa-facebook-f"></i></a>
+                                <a
+                                    href="https://api.whatsapp.com/send/?phone=34604407605&text=Hola%2C+necesito+informaci%C3%B3n+sobre+sus+servicios+disponibles&type=phone_number&app_absent=0"><i
+                                        class="fab fa-whatsapp"></i></a>
+                                <a href="https://www.instagram.com/splgroup.es/"><i class="fab fa-instagram"></i></a>
+                                <a href="contact.html"><i class="fas fa-envelope"></i></a>
+                                <a href="https://www.linkedin.com/company/service-pluslevante/"><i
+                                        class="fab fa-linkedin-in"></i></a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-3">
+                    <div class="col-md-4">
                         <div class="footer-link">
                             <h2>Servicios</h2>
-                            <a href="">""</a>
-                            <a href="">""</a>
-                            <a href="">""</a>
-                            <a href="">""</a>
-                            <a href="">""</a>
+                            <a href="">Construcciones</a>
+                            <a href="">Estructuras</a>
+                            <a href="">Reformas Integrales</a>
+                            <a href="">Mantenimiento Integral</a>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-3">
+                    <div class="col-md-4">
                         <div class="footer-link">
                             <h2>Información</h2>
                             <a href="about.html">Empresa</a>
-                            <a href="construction.html">Construcciones</a>
-                            <a href="structures.html">Estructuras</a>
-                            <a href="">Reformas</a>
-                            <a href="service.html">Servicios</a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <div class="footer-link">
-                            <h2>Socios</h2>
-                            <a href="">""</a>
-                            <a href="">""</a>
-                            <a href="">""</a>
-                            <a href="">""</a>
-                            <a href="">""</a>
-
+                            <a href="contact.html">Contacto</a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="container footer-menu">
                 <div class="f-menu">
-                    <a href="">Terms of use</a>
-                    <a href="">Privacy policy</a>
-                    <a href="">Cookies</a>
-                    <a href="">Help</a>
-                    <a href="">FQAs</a>
+                    <a href="">Condiciones de uso</a>
+                    <a href="">Política de privacidad</a>
+                    <a href="">Política de cookies</a>
                 </div>
             </div>
             <div class="container copyright">
                 <div class="row">
                     <div class="col-md-6">
-                        <p>&copy; <a href="#">Your Site Name</a>, All Right Reserved.</p>
+                        <p>&copy; <a href="#">Copyright © 2025 </a>, SPL Group.</p>
                     </div>
                     <div class="col-md-6">
-                        <a href="index.html">Copyright © SPL Group | Aviso legal y política de privacidad</a>
+                        <a href="../index.html">Copyright © SPL Group | Aviso legal y política de privacidad</a>
                     </div>
                 </div>
             </div>
@@ -517,6 +511,7 @@
 
     <!-- Template Javascript -->
     <script src="../js/main.js"></script>
+    <script src="../js/carousel.js"></script>
     <script src="../js/script.js"></script>
 
 </body>
