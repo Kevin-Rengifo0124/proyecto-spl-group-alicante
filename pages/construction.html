@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
+
+<head>
     <meta charset="utf-8">
     <title> SPL Group | Edificaciones - Estructuras y Obras</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,7 +28,7 @@
     <link href="../lib/slick/slick-theme.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/structures.css" rel="stylesheet">
 </head>
 
 <body>
@@ -67,27 +68,29 @@
         <div class="nav-bar">
             <div class="container-fluid">
                 <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
-                    <a href="#" class="navbar-brand">MENÚ</a>
+                    <a href="#" class="navbar-brand">MENU</a>
                     <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <div class="navbar-nav mr-auto">
-                            <a href="../index.html" class="nav-item nav-link active">Inicio</a>
+                            <a href="../index.html" class="nav-item nav-link">Inicio</a>
                             <div class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Construcciones</a>
                                 <div class="dropdown-menu">
-                                    <a href="" class="dropdown-item">Obras</a>
-                                    <a href="" class="dropdown-item">Construcción Residencial</a>
-                                    <a href="" class="dropdown-item">Construcción Comercial</a>
-                                    <a href="" class="dropdown-item">Rehabilitación Edificios</a>
+                                    <a href="#" class="dropdown-item">Obras</a>
+                                    <a href="#" class="dropdown-item">Construcción Residencial</a>
+                                    <a href="#" class="dropdown-item">Construcción Comercial</a>
+                                    <a href="#" class="dropdown-item">Rehabilitación Edificios</a>
                                 </div>
                             </div>
-                            <a href="structures.html" class="nav-item nav-link">Estructuras</a>
+                            <a href="structures.html" class="nav-item nav-link active">Estructuras</a>
+                            <!-- Versión corregida del dropdown de Servicios -->
                             <div class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Servicios</a>
                                 <div class="dropdown-menu">
                                     <a href="reforms.html" class="dropdown-item">Reformas</a>
+                                    <a href="service.html" class="dropdown-item">Mantenimiento</a>
                                 </div>
                             </div>
                         </div>
@@ -99,227 +102,291 @@
             </div>
         </div>
         <!-- Nav Bar End -->
-            
-            <!-- Page Header Start -->
-            <div class="page-header">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <h2>Nuestras Obras</h2>
+
+        <!-- Page Header Start -->
+        <div class="page-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2>Nuestras Obras</h2>
+                    </div>
+                    <div class="col-12">
+                        <a href="index.html">Inicio</a>
+                        <a href="construction.html">Nuestras Obras</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Page Header End -->
+
+
+        <!-- Section Structures-->
+        <div class="content-section">
+            <img src="../images-spl-group/estructuras-spl-group.jpeg" alt="Construcción en proceso">
+            <div class="text">
+                <h3>Lorem ipsum dolor sit amet consectetur adipiscing elit</h3>
+                <div class="features">
+                    <div class="feature-item">
+                        <div class="feature-number">01</div>
+                        <div class="feature-text">
+                            <h4>Consectetur</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt
+                                ut labore.</p>
                         </div>
-                        <div class="col-12">
-                            <a href="index.html">Inicio</a>
-                            <a href="construction.html">Nuestras Obras</a>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-number">02</div>
+                        <div class="feature-text">
+                            <h4>Adipiscing Elit</h4>
+                            <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam
+                                quis.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-number">03</div>
+                        <div class="feature-text">
+                            <h4>Tempor Incididunt</h4>
+                            <p>Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- Page Header End -->
-
-
-            <!-- Portfolio Start -->
-            <div class="portfolio">
-                <div class="container">
-                    <div class="section-header text-center">
-                        <p>Nuestras Obras</p>
-                        <h2>Visita Nuestras Obras</h2>
-                    </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <ul id="portfolio-flters">
-                                <li data-filter="*" class="filter-active">Todas</li>
-                                <li data-filter=".first">Finalizadas</li>
-                                <li data-filter=".second">En Curso </li>
-                                <li data-filter=".third">Próximamente</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="row portfolio-container">
-                        <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item first wow fadeInUp" data-wow-delay="0.1s">
-                            <div class="portfolio-warp">
-                                <div class="portfolio-img">
-                                    <img src="../images-spl-group/ultimos-proyectos7.jpeg" alt="Image">
-                                    <div class="portfolio-overlay">
-                                        <p>
-                                            Lorem ipsum dolor sit amet elit. Phasel nec pretium mi. Curabit facilis ornare velit non. Aliqu metus tortor, auctor id gravi condime, viverra quis sem.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="portfolio-text">
-                                    <h3>Project Name</h3>
-                                    <a class="btn" href="../images-spl-group/ultimos-proyectos7.jpeg" data-lightbox="portfolio">+</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item second wow fadeInUp" data-wow-delay="0.2s">
-                            <div class="portfolio-warp">
-                                <div class="portfolio-img">
-                                    <img src="../images-spl-group/ultimos-proyectos7.jpeg" alt="Image">
-                                    <div class="portfolio-overlay">
-                                        <p>
-                                            Lorem ipsum dolor sit amet elit. Phasel nec pretium mi. Curabit facilis ornare velit non. Aliqu metus tortor, auctor id gravi condime, viverra quis sem.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="portfolio-text">
-                                    <h3>Project Name</h3>
-                                    <a class="btn" href="../images-spl-group/ultimos-proyectos7.jpeg" data-lightbox="portfolio">+</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item third wow fadeInUp" data-wow-delay="0.3s">
-                            <div class="portfolio-warp">
-                                <div class="portfolio-img">
-                                    <img src="../images-spl-group/ultimos-proyectos7.jpeg" alt="Image">
-                                    <div class="portfolio-overlay">
-                                        <p>
-                                            Lorem ipsum dolor sit amet elit. Phasel nec pretium mi. Curabit facilis ornare velit non. Aliqu metus tortor, auctor id gravi condime, viverra quis sem.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="portfolio-text">
-                                    <h3>Project Name</h3>
-                                    <a class="btn" href="../images-spl-group/ultimos-proyectos7.jpeg" data-lightbox="portfolio">+</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item first wow fadeInUp" data-wow-delay="0.4s">
-                            <div class="portfolio-warp">
-                                <div class="portfolio-img">
-                                    <img src="../images-spl-group/ultimos-proyectos7.jpeg" alt="Image">
-                                    <div class="portfolio-overlay">
-                                        <p>
-                                            Lorem ipsum dolor sit amet elit. Phasel nec pretium mi. Curabit facilis ornare velit non. Aliqu metus tortor, auctor id gravi condime, viverra quis sem.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="portfolio-text">
-                                    <h3>Project Name</h3>
-                                    <a class="btn" href="../images-spl-group/ultimos-proyectos7.jpeg" data-lightbox="portfolio">+</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item second wow fadeInUp" data-wow-delay="0.5s">
-                            <div class="portfolio-warp">
-                                <div class="portfolio-img">
-                                    <img src="../images-spl-group/ultimos-proyectos7.jpeg" alt="Image">
-                                    <div class="portfolio-overlay">
-                                        <p>
-                                            Lorem ipsum dolor sit amet elit. Phasel nec pretium mi. Curabit facilis ornare velit non. Aliqu metus tortor, auctor id gravi condime, viverra quis sem.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="portfolio-text">
-                                    <h3>Project Name</h3>
-                                    <a class="btn" href="../images-spl-group/ultimos-proyectos7.jpeg" data-lightbox="portfolio">+</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item third wow fadeInUp" data-wow-delay="0.6s">
-                            <div class="portfolio-warp">
-                                <div class="portfolio-img">
-                                    <img src="../images-spl-group/ultimos-proyectos7.jpeg" alt="Image">
-                                    <div class="portfolio-overlay">
-                                        <p>
-                                            Lorem ipsum dolor sit amet elit. Phasel nec pretium mi. Curabit facilis ornare velit non. Aliqu metus tortor, auctor id gravi condime, viverra quis sem.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="portfolio-text">
-                                    <h3>Project Name</h3>
-                                    <a class="btn" href="../images-spl-group/ultimos-proyectos7.jpeg" data-lightbox="portfolio">+</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12 load-more">
-                            <a class="btn" href="contact.html">Consultar</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Portfolio End -->
-
-
-            <!-- Footer Start -->
-            <div class="footer wow fadeIn" data-wow-delay="0.3s">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-6 col-lg-3">
-                            <div class="footer-contact">
-                                <h2>Contacto</h2>
-                                <p><i class="fa fa-map-marker-alt"></i>""</p>
-                                <p><i class="fa fa-phone-alt"></i>+34 604 40 76 05</p>
-                                <p><i class="fa fa-envelope"></i>info@splgroup.es</p>
-                                <div class="footer-social">
-                                    <a href=""><i class="fab fa-twitter"></i></a>
-                                    <a href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a href=""><i class="fab fa-youtube"></i></a>
-                                    <a href=""><i class="fab fa-instagram"></i></a>
-                                    <a href=""><i class="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-3">
-                            <div class="footer-link">
-                                <h2>Servicios</h2>
-                                <a href="">""</a>
-                                <a href="">""</a>
-                                <a href="">""</a>
-                                <a href="">""</a>
-                                <a href="">""</a>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-3">
-                            <div class="footer-link">
-                                <h2>Información</h2>
-                                <a href="about.html">Empresa</a>
-                                <a href="construction.html">Construcciones</a>
-                                <a href="structures.html">Estructuras</a>
-                                <a href="">Reformas</a>
-                                <a href="service.html">Servicios</a>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-3">
-                            <div class="footer-link">
-                                <h2>Socios</h2>
-                                <a href="">""</a>
-                                <a href="">""</a>
-                                <a href="">""</a>
-                                <a href="">""</a>
-                                <a href="">""</a>
-                            
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="container footer-menu">
-                    <div class="f-menu">
-                        <a href="">Terms of use</a>
-                        <a href="">Privacy policy</a>
-                        <a href="">Cookies</a>
-                        <a href="">Help</a>
-                        <a href="">FQAs</a>
-                    </div>
-                </div>
-                <div class="container copyright">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <p>&copy; <a href="#">Your Site Name</a>, All Right Reserved.</p>
-                        </div>
-                        <div class="col-md-6">
-                            <a href="index.html">Copyright © SPL Group | Aviso legal y política de privacidad</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Footer End -->
-
-            <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
         </div>
 
-       <!-- JavaScript Libraries -->
+        <div class="about-wrapper">
+            <div class="about-section">
+                <h2>Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing Elit</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et
+                    dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur.
+                </p>
+            </div>
+
+            <div class="icons-section">
+                <div class="icon-item">
+                    <i class="fas fa-tools"></i>
+                    <span>Construcción</span>
+                </div>
+                <div class="icon-item">
+                    <i class="fas fa-building"></i>
+                    <span>Estructuras</span>
+                </div>
+                <div class="icon-item">
+                    <i class="fas fa-water"></i>
+                    <span>Reformas</span>
+                </div>
+                <a href="contact.html" class="contact-button">
+                    ¡Contáctanos hoy!
+                </a>
+            </div>
+        </div>
+        <!-- Portfolio Start -->
+        <div class="portfolio">
+            <div class="container">
+                <div class="section-header text-center">
+                    <p>Nuestras Obras</p>
+                    <h2>Visita Nuestras Obras</h2>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <ul id="portfolio-flters">
+                            <li data-filter="*" class="filter-active">Todas</li>
+                            <li data-filter=".first">Finalizadas</li>
+                            <li data-filter=".second">En Curso </li>
+                            <li data-filter=".third">Próximamente</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row portfolio-container">
+                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item first wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="portfolio-warp">
+                            <div class="portfolio-img">
+                                <img src="../images-spl-group/ultimos-proyectos7.jpeg" alt="Image">
+                                <div class="portfolio-overlay">
+                                    <p>
+                                        Lorem ipsum dolor sit amet elit. Phasel nec pretium mi. Curabit facilis ornare
+                                        velit non. Aliqu metus tortor, auctor id gravi condime, viverra quis sem.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="portfolio-text">
+                                <h3>Project Name</h3>
+                                <a class="btn" href="../images-spl-group/ultimos-proyectos7.jpeg"
+                                    data-lightbox="portfolio">+</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item second wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="portfolio-warp">
+                            <div class="portfolio-img">
+                                <img src="../images-spl-group/ultimos-proyectos7.jpeg" alt="Image">
+                                <div class="portfolio-overlay">
+                                    <p>
+                                        Lorem ipsum dolor sit amet elit. Phasel nec pretium mi. Curabit facilis ornare
+                                        velit non. Aliqu metus tortor, auctor id gravi condime, viverra quis sem.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="portfolio-text">
+                                <h3>Project Name</h3>
+                                <a class="btn" href="../images-spl-group/ultimos-proyectos7.jpeg"
+                                    data-lightbox="portfolio">+</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item third wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="portfolio-warp">
+                            <div class="portfolio-img">
+                                <img src="../images-spl-group/ultimos-proyectos7.jpeg" alt="Image">
+                                <div class="portfolio-overlay">
+                                    <p>
+                                        Lorem ipsum dolor sit amet elit. Phasel nec pretium mi. Curabit facilis ornare
+                                        velit non. Aliqu metus tortor, auctor id gravi condime, viverra quis sem.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="portfolio-text">
+                                <h3>Project Name</h3>
+                                <a class="btn" href="../images-spl-group/ultimos-proyectos7.jpeg"
+                                    data-lightbox="portfolio">+</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item first wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="portfolio-warp">
+                            <div class="portfolio-img">
+                                <img src="../images-spl-group/ultimos-proyectos7.jpeg" alt="Image">
+                                <div class="portfolio-overlay">
+                                    <p>
+                                        Lorem ipsum dolor sit amet elit. Phasel nec pretium mi. Curabit facilis ornare
+                                        velit non. Aliqu metus tortor, auctor id gravi condime, viverra quis sem.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="portfolio-text">
+                                <h3>Project Name</h3>
+                                <a class="btn" href="../images-spl-group/ultimos-proyectos7.jpeg"
+                                    data-lightbox="portfolio">+</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item second wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="portfolio-warp">
+                            <div class="portfolio-img">
+                                <img src="../images-spl-group/ultimos-proyectos7.jpeg" alt="Image">
+                                <div class="portfolio-overlay">
+                                    <p>
+                                        Lorem ipsum dolor sit amet elit. Phasel nec pretium mi. Curabit facilis ornare
+                                        velit non. Aliqu metus tortor, auctor id gravi condime, viverra quis sem.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="portfolio-text">
+                                <h3>Project Name</h3>
+                                <a class="btn" href="../images-spl-group/ultimos-proyectos7.jpeg"
+                                    data-lightbox="portfolio">+</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item third wow fadeInUp" data-wow-delay="0.6s">
+                        <div class="portfolio-warp">
+                            <div class="portfolio-img">
+                                <img src="../images-spl-group/ultimos-proyectos7.jpeg" alt="Image">
+                                <div class="portfolio-overlay">
+                                    <p>
+                                        Lorem ipsum dolor sit amet elit. Phasel nec pretium mi. Curabit facilis ornare
+                                        velit non. Aliqu metus tortor, auctor id gravi condime, viverra quis sem.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="portfolio-text">
+                                <h3>Project Name</h3>
+                                <a class="btn" href="../images-spl-group/ultimos-proyectos7.jpeg"
+                                    data-lightbox="portfolio">+</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 load-more">
+                        <a class="btn" href="contact.html">Consultar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio End -->
+
+
+        <!-- Footer Start -->
+        <div class="footer wow fadeIn" data-wow-delay="0.3s">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="footer-contact">
+                            <h2>Contacto</h2>
+                            <p><i class="fa fa-map-marker-alt"></i>Calle Lo Blanc, 18, 03187 Los Montesinos, Alicante,
+                                España</p>
+                            <p><i class="fa fa-phone-alt"></i>+34 604 40 76 05</p>
+                            <p><i class="fa fa-envelope"></i>info@splgroup.es</p>
+                            <div class="footer-social">
+                                <a href="https://www.facebook.com/splgroup.spain/?locale=hi_IN"><i
+                                        class="fab fa-facebook-f"></i></a>
+                                <a
+                                    href="https://api.whatsapp.com/send/?phone=34604407605&text=Hola%2C+necesito+informaci%C3%B3n+sobre+sus+servicios+disponibles&type=phone_number&app_absent=0"><i
+                                        class="fab fa-whatsapp"></i></a>
+                                <a href="https://www.instagram.com/splgroup.es/"><i class="fab fa-instagram"></i></a>
+                                <a href="contact.html"><i class="fas fa-envelope"></i></a>
+                                <a href="https://www.linkedin.com/company/service-pluslevante/"><i
+                                        class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="footer-link">
+                            <h2>Servicios</h2>
+                            <a href="">Reformas</a>
+                            <a href="">Mantenimiento Hogar</a>
+                            <a href="">Fontaneria</a>
+                            <a href="">Alojamiento Turísticos</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="footer-link">
+                            <h2>Información</h2>
+                            <a href="about.html">Empresa</a>
+                            <a href="contact.html">Contacto</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container footer-menu">
+                <div class="f-menu">
+                    <a href="">Condiciones de uso</a>
+                    <a href="">Política de privacidad</a>
+                    <a href=""> Política de cookies</a>
+                </div>
+            </div>
+            <div class="container copyright">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>&copy; <a href="#">Copyright © 2025 </a>, SPL Group.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <a href="../index.html">Copyright © SPL Group | Aviso legal y política de privacidad</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer End -->
+
+        <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
     <script src="../lib/easing/easing.min.js"></script>
@@ -333,5 +400,6 @@
 
     <!-- Template Javascript -->
     <script src="../js/main.js"></script>
-    </body>
+</body>
+
 </html>
