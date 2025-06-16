@@ -2361,7 +2361,7 @@ a:focus {
 /**********************************************/
 .carousel-wrapper {
     width: 100%;
-    height: 100vh;
+    min-height: 700px;  /* o el valor que necesites */
     display: flex;
     align-items: center;
     justify-content: center;
